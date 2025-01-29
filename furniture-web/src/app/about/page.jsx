@@ -134,45 +134,6 @@ const AboutPage = () => {
                 </div>
             </section>
 
-            {/* Team Section */}
-            <section className="py-24 px-6 md:px-12 lg:px-24">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-20">
-                        <h2 className="text-4xl font-light mb-6">
-                            The Minds Behind
-                        </h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
-                            Our team of passionate designers and craftsmen
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-12">
-                        {[1, 2, 3].map((item) => (
-                            <div key={item} className="group relative">
-                                <div className="aspect-square bg-gray-100 rounded-xl overflow-hidden mb-6">
-                                    <img
-                                        src={`/team-${item}.jpg`}
-                                        alt="Team member"
-                                        className="w-full h-full object-cover transform group-hover:scale-105 transition-all"
-                                    />
-                                </div>
-                                <div className="text-center">
-                                    <h3 className="text-2xl font-light mb-2">
-                                        Alexandra Wood
-                                    </h3>
-                                    <p className="text-gray-600">
-                                        Lead Designer
-                                    </p>
-                                    <p className="mt-4 text-gray-600 max-w-xs mx-auto">
-                                        15+ years experience in luxury furniture
-                                        design
-                                    </p>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            </section>
 
             {/* Achievements Section */}
             <div className="bg-black text-white py-24 px-6 md:px-12 lg:px-24">
