@@ -4,26 +4,66 @@ import { useState } from "react";
 
 const GalleryPage = () => {
     const [selectedPhoto, setSelectedPhoto] = useState(null);
+    const [selectedType, setSelectedType] = useState("all");
     const photos = [
         {
             id: 1,
             src: "/images/gallery/contact-us.jpg",
             orientation: "landscape",
+            type: "showroom",
         },
-        { id: 2, src: "/images/gallery/test1.jpg", orientation: "portrait" },
-        { id: 3, src: "/images/gallery/test2.jpg", orientation: "square" },
-        { id: 4, src: "/images/gallery/test3.jpg", orientation: "landscape" },
-        { id: 5, src: "/images/gallery/test1.jpg", orientation: "portrait" },
-        { id: 6, src: "/gallery/6.jpg", orientation: "landscape" },
-        { id: 7, src: "/gallery/7.jpg", orientation: "portrait" },
-        { id: 8, src: "/gallery/8.jpg", orientation: "square" },
-        // Add more photos as needed
+        {
+            id: 2,
+            src: "/images/gallery/test1.jpg",
+            orientation: "portrait",
+            type: "materials",
+        },
+        {
+            id: 3,
+            src: "/images/gallery/test2.jpg",
+            orientation: "square",
+            type: "process",
+        },
+        {
+            id: 4,
+            src: "/images/gallery/test3.jpg",
+            orientation: "landscape",
+            type: "showroom",
+        },
+        {
+            id: 5,
+            src: "/images/gallery/test1.jpg",
+            orientation: "portrait",
+            type: "materials",
+        },
+        {
+            id: 6,
+            src: "/gallery/6.jpg",
+            orientation: "landscape",
+            type: "finished",
+        },
+        {
+            id: 7,
+            src: "/gallery/7.jpg",
+            orientation: "portrait",
+            type: "process",
+        },
+        {
+            id: 8,
+            src: "/gallery/8.jpg",
+            orientation: "square",
+            type: "finished",
+        },
     ];
 
+    const filteredPhotos =
+        selectedType === "all"
+            ? photos
+            : photos.filter((photo) => photo.type === selectedType);
     return (
         <div className="bg-white">
             {/* Hero Section */}
-            <div className="relative h-[600px] bg-[url('/images/gallery/galery.jpg')] bg-cover bg-center">
+            <div className="relative h-[600px] bg-[url('/images/gallery/gallery-hero.jpg')] bg-cover bg-center">
                 <Navigation />
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="relative z-10 h-full flex items-center justify-center">
@@ -91,44 +131,24 @@ const GalleryPage = () => {
                 </div>
             </section>
 
-            <div className="bg-gray-50 py-24 px-6 md:px-12 lg:px-24">
-                <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-12">
-                    {[
-                        {
-                            title: "Curated Collections",
-                            icon: "📸",
-                            text: "Thousands of high-resolution images documenting our design evolution",
-                        },
-                        {
-                            title: "Detail-Oriented",
-                            icon: "🔍",
-                            text: "Macro photography revealing the precision of our joinery and finishes",
-                        },
-                        {
-                            title: "Global Inspirations",
-                            icon: "🌍",
-                            text: "Projects spanning from New York penthouses to Tokyo boutique hotels",
-                        },
-                    ].map((item, index) => (
-                        <div
-                            key={index}
-                            className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-                        >
-                            <div className="text-4xl mb-6">{item.icon}</div>
-                            <h3 className="text-2xl font-light mb-4">
-                                {item.title}
-                            </h3>
-                            <p className="text-gray-600">{item.text}</p>
-                        </div>
-                    ))}
-                </div>
-            </div>
-
             <section className="pb-2 pt-24 px-6 md:px-12 lg:px-24">
                 <div className="max-w-7xl mx-auto text-center mb-20">
                     <h2 className="text-4xl font-light mb-6">
                         Explore the Collection
                     </h2>
+                    <div className="mb-8 flex justify-center">
+                        <select
+                            value={selectedType}
+                            onChange={(e) => setSelectedType(e.target.value)}
+                            className="px-4 py-2 border rounded-lg bg-white text-gray-700 focus:outline-none focus:border-gray-500"
+                        >
+                            <option value="all">All Categories</option>
+                            <option value="showroom">Showroom</option>
+                            <option value="materials">Materials</option>
+                            <option value="process">Making Process</option>
+                            <option value="finished">Finished Pieces</option>
+                        </select>
+                    </div>
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         Browse through years of design excellence. Click any
                         image to view in full detail and discover the story
@@ -138,10 +158,10 @@ const GalleryPage = () => {
             </section>
 
             {/* Gallery Grid */}
-            <section className="py-24 px-6 md:px-12 lg:px-24">
+            <section className="pb-24 pt-2 px-6 md:px-12 lg:px-24">
                 <div className="max-w-7xl mx-auto">
                     <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-                        {photos.map((photo) => (
+                        {filteredPhotos.map((photo) => (
                             <div
                                 key={photo.id}
                                 className="relative group cursor-pointer break-inside-avoid"
