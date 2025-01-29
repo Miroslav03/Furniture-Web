@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 export default function Navigation() {
     return (
@@ -7,24 +8,36 @@ export default function Navigation() {
             </h1>
 
             <div className="flex items-center space-x-8">
-                <a
-                    href="#"
+                <Link
+                    href="/"
                     className="text-white/90 hover:text-white transition-colors text-lg"
                 >
                     HOME
-                </a>
-                <a
-                    href="#"
+                </Link>
+                <Link
+                    href="/products"
                     className="text-white/90 hover:text-white transition-colors text-lg"
                 >
-                    PRODUCT
-                </a>
-                <a
-                    href="#"
+                    PRODUCTS
+                </Link>
+                <Link
+                    href="/gallery"
                     className="text-white/90 hover:text-white transition-colors text-lg"
                 >
-                    CONTACT US
-                </a>
+                    GALERY
+                </Link>
+                <Link
+                    href="/about"
+                    className="text-white/90 hover:text-white transition-colors text-lg"
+                >
+                    ABOUT
+                </Link>
+                <Link
+                    href="/contact-us"
+                    className="text-white/90 hover:text-white transition-colors text-lg"
+                >
+                    КОНТАКТИ
+                </Link>
             </div>
         </nav>
     );
