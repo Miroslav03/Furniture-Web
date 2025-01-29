@@ -6,7 +6,7 @@ export const AboutSection = () => {
           <div className="lg:w-1/2 relative">
             <div className="relative aspect-square bg-gray-100 rounded-xl overflow-hidden">
               {/* Main Image */}
-              <div className="absolute inset-0 bg-[url('/about-main.jpg')] bg-cover bg-center"></div>
+              <div className="absolute inset-0 bg-[url('/images/gallery/about-image-1.jpg')] bg-cover bg-center"></div>
               
               {/* Decorative Element */}
               <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-gray-50 rounded-xl border-8 border-white"></div>
@@ -14,7 +14,7 @@ export const AboutSection = () => {
             
             {/* Secondary Image */}
             <div className="absolute -left-8 top-24 w-48 h-48 bg-gray-200 rounded-xl overflow-hidden border-4 border-white shadow-lg">
-              <div className="bg-[url('/about-detail.jpg')] bg-cover bg-center w-full h-full"></div>
+              <div className="bg-[url('/images/gallery/about-image-3.jpg')] bg-cover bg-center w-full h-full"></div>
             </div>
           </div>
   
