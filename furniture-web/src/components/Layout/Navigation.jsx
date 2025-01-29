@@ -12,25 +12,25 @@ export default function Navigation() {
                     href="/"
                     className="text-white/90 hover:text-white transition-colors text-lg"
                 >
-                    HOME
+                    НАЧАЛО
                 </Link>
                 <Link
                     href="/products"
                     className="text-white/90 hover:text-white transition-colors text-lg"
                 >
-                    PRODUCTS
+                    ПРОДУКТИ
                 </Link>
                 <Link
                     href="/gallery"
                     className="text-white/90 hover:text-white transition-colors text-lg"
                 >
-                    GALERY
+                    ГАЛЕРИЯ
                 </Link>
                 <Link
                     href="/about"
                     className="text-white/90 hover:text-white transition-colors text-lg"
                 >
-                    ABOUT
+                    ЗА НАС
                 </Link>
                 <Link
                     href="/contact-us"

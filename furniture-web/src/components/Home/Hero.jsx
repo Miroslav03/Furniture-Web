@@ -14,24 +14,24 @@ const HeroSection = () => {
                 <div className="text-center text-white max-w-4xl">
                     <div className="mb-8">
                         <p className="text-lg font-semibold tracking-widest mb-4">
-                            OFFER FOR BEST INTERIOR
+                            ОФЕРТА ЗА НАЙ-ДОБЪР ИНТЕРИОР
                         </p>
                         <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight">
-                            An aesthetic room is
+                            Естетично пространство и
                             <br />
-                            given harmony
+                            хармония
                         </h1>
                     </div>
 
                     <p className="text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto leading-relaxed">
-                        Change your view to realize a neat and aesthetic corner
-                        of the house and amaze everyone, especially your nuclear
-                        family. Make every moment of your home equipment a
-                        valuable item
+                        Променете своя поглед и открийте подреден и естетичен
+                        кът у дома, който ще впечатли всички, особено вашето
+                        семейство. Превърнете всеки детайл от домашното
+                        обзавеждане в ценен и стилен елемент още сега.
                     </p>
 
                     <button className="bg-white text-black px-8 py-3 rounded-full hover:bg-gray-100 transition-colors text-lg font-medium">
-                        Shop Now
+                       Разгледай сега
                     </button>
                 </div>
             </div>
