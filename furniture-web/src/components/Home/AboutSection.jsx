@@ -1,6 +1,6 @@
 export const AboutSection = () => {
     return (
-      <div className="bg-white py-24 px-6 md:px-12 lg:px-24">
+      <div className="bg-white pb-24 pt-12 px-6 md:px-12 lg:px-24">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
           {/* Image Gallery */}
           <div className="lg:w-1/2 relative">
