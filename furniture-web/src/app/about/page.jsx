@@ -1,18 +1,18 @@
 import Navigation from "@/components/Layout/Navigation";
+import Image from "next/image";
 
 const AboutPage = () => {
     return (
         <div className="bg-white">
             {/* Hero Section */}
-            <div className="relative h-[600px] bg-[url('/about-hero.jpg')] bg-cover bg-center">
+            <div className="relative h-[600px] bg-[url('/images/gallery/about-hero.jpg')] bg-cover bg-center">
                 <Navigation />
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="text-center text-white max-w-4xl px-4">
                         <h1 className="text-5xl md:text-7xl font-light mb-8 leading-tight">
-                            Crafting Timeless Spaces
-                            <br />
-                            Through Design Excellence
+                            Създаване на мебели
+                            <br />с Изключителен Дизайн
                         </h1>
                     </div>
                 </div>
@@ -23,10 +23,11 @@ const AboutPage = () => {
                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                     <div className="relative group">
                         <div className="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden">
-                            <img
-                                src="/about-story.jpg"
+                            <Image
+                                src="/images/gallery/about-owner.jpg"
                                 alt="Our workshop"
-                                className="w-full h-full object-cover transform group-hover:scale-105 transition-all"
+                                className="w-full h-full object-cover transform group-hover:scale-105 transition-all rounded-xl"
+                                fill
                             />
                         </div>
                         <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-lg w-3/4">
@@ -45,11 +46,13 @@ const AboutPage = () => {
                             Our Journey
                         </h2>
                         <p className="text-lg text-gray-600">
-                            Established in 2005, Classika has evolved from a
-                            small workshop to an internationally recognized
-                            furniture design house. With over 500,000 satisfied
-                            customers worldwide, we've redefined modern living
-                            through our commitment to exceptional craftsmanship.
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Amet animi iusto quo non rem. Pariatur neque
+                            consequuntur nobis reiciendis tempora sed vitae
+                            molestias quisquam eaque commodi amet qui, possimus
+                            est?Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Nihil itaque ducimus odio
+                            inventore labore, ut illum, quo nisi dolorum vero
                         </p>
                         <div className="grid grid-cols-2 gap-8 mt-12">
                             <div>
@@ -57,9 +60,8 @@ const AboutPage = () => {
                                     Our Philosophy
                                 </h3>
                                 <p className="text-gray-600">
-                                    Blending traditional techniques with
-                                    contemporary design, we create pieces that
-                                    stand the test of time.
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Aliquam, assumenda
                                 </p>
                             </div>
                             <div>
@@ -67,8 +69,8 @@ const AboutPage = () => {
                                     Global Recognition
                                 </h3>
                                 <p className="text-gray-600">
-                                    Recipient of 2 World Design Awards and
-                                    trusted partner in 30+ countries
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Aliquam, assumenda
                                 </p>
                             </div>
                         </div>
@@ -92,25 +94,90 @@ const AboutPage = () => {
                         {[
                             {
                                 title: "Quality Craftsmanship",
-                                icon: "🛠️",
+                                icon: (
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth={1.5}
+                                        stroke="currentColor"
+                                        className="w-12 h-12 mx-auto text-black"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M2.25 2.25l4.5 4.5M9.75 9.75l-4.5 4.5M20.25 9.75l-4.5 4.5M14.25 14.25l4.5 4.5M4.5 19.5l4.5-4.5"
+                                        />
+                                    </svg>
+                                ),
                                 description:
                                     "Handcrafted using premium materials and time-honored techniques",
                             },
                             {
                                 title: "Timeless Design",
-                                icon: "🎨",
+                                icon: (
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth={1.5}
+                                        stroke="currentColor"
+                                        className="w-12 h-12 mx-auto text-black"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M12 2.25v19.5M2.25 12h19.5"
+                                        />
+                                    </svg>
+                                ),
                                 description:
                                     "Creating pieces that transcend temporary trends",
                             },
                             {
                                 title: "Client-Centric",
-                                icon: "❤️",
+                                icon: (
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth={1.5}
+                                        stroke="currentColor"
+                                        className="w-12 h-12 mx-auto text-black"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M12 9.75a2.25 2.25 0 100-4.5 2.25 2.25 0 000 4.5z"
+                                        />
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M19.5 10.5c0 7.05-7.5 11.25-7.5 11.25S4.5 17.55 4.5 10.5a7.5 7.5 0 1115 0z"
+                                        />
+                                    </svg>
+                                ),
                                 description:
                                     "Personalized service from concept to delivery",
                             },
                             {
                                 title: "Sustainable Practices",
-                                icon: "🌱",
+                                icon: (
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        strokeWidth={1.5}
+                                        stroke="currentColor"
+                                        className="w-12 h-12 mx-auto text-black"
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M12 2.25c-3.87 0-7 3.13-7 7 0 3.52 2.46 6.47 5.75 6.93M12 2.25c3.87 0 7 3.13 7 7 0 3.52-2.46 6.47-5.75 6.93M12 22.25v-3.5"
+                                        />
+                                    </svg>
+                                ),
                                 description:
                                     "Ethically sourced materials and eco-friendly production",
                             },
@@ -119,9 +186,7 @@ const AboutPage = () => {
                                 key={index}
                                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
                             >
-                                <div className="text-4xl mb-6">
-                                    {value.icon}
-                                </div>
+                                <div className="mb-6">{value.icon}</div>
                                 <h3 className="text-xl font-light mb-4">
                                     {value.title}
                                 </h3>
@@ -134,25 +199,24 @@ const AboutPage = () => {
                 </div>
             </section>
 
-
             {/* Achievements Section */}
             <div className="bg-black text-white py-24 px-6 md:px-12 lg:px-24">
                 <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 text-center">
                     <div className="p-6">
-                        <div className="text-5xl font-light mb-4">18+</div>
-                        <div className="text-gray-400">Years Experience</div>
+                        <div className="text-5xl font-light mb-4">20+</div>
+                        <div className="text-gray-400">Години Опит</div>
                     </div>
                     <div className="p-6">
-                        <div className="text-5xl font-light mb-4">500K+</div>
-                        <div className="text-gray-400">Happy Clients</div>
+                        <div className="text-5xl font-light mb-4">5000+</div>
+                        <div className="text-gray-400">Изработени Мебели</div>
                     </div>
                     <div className="p-6">
-                        <div className="text-5xl font-light mb-4">30+</div>
-                        <div className="text-gray-400">Countries Served</div>
+                        <div className="text-5xl font-light mb-4">1000+</div>
+                        <div className="text-gray-400">Доволни клиенти</div>
                     </div>
                     <div className="p-6">
-                        <div className="text-5xl font-light mb-4">2</div>
-                        <div className="text-gray-400">World Awards</div>
+                        <div className="text-5xl font-light mb-4">100+</div>
+                        <div className="text-gray-400">Уникални Модели</div>
                     </div>
                 </div>
             </div>
@@ -161,14 +225,14 @@ const AboutPage = () => {
             <div className="bg-gray-50 py-24 px-6 md:px-12 lg:px-24">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-4xl font-light mb-8">
-                        Ready to Transform Your Space?
+                        Готови ли сте да преобразите вашия интериор?
                     </h2>
                     <p className="text-lg text-gray-600 mb-12 max-w-xl mx-auto">
-                        Let's create something beautiful together. Schedule a
-                        free design consultation with our experts.
+                        Нека създадем нещо уникално заедно. Запишете се за
+                        безплатна консултация с нашите майстори мебелисти.
                     </p>
                     <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors text-lg font-medium">
-                        Book Consultation
+                        Запишете се сега
                     </button>
                 </div>
             </div>
