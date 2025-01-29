@@ -2,34 +2,32 @@ const ProductCollection = () => {
     const products = [
         {
             name: "Кухни",
-            registerPrice: "E346",
-            memberPrice: "E246",
+            description:
+                "Модерни и класически кухни, проектирани за удобство и стил.",
             src: "home-kitchen.jpg",
         },
         {
             name: "Мебели от масив",
-            registerPrice: "E895",
-            memberPrice: "E846",
             description:
-                "Make travel easier with our patented 2-in-1 work plus suitcase backpack",
+                "Качествени мебели от масивно дърво, съчетаващи издръжливост и елегантност.",
             src: "furniture-solid.jpg",
         },
         {
             name: "Гардероби",
-            registerPrice: "E898",
-            memberPrice: "E934",
+            description:
+                "Функционални и стилни гардероби за оптимално съхранение на вашите дрехи.",
             src: "wardrobe.jpg",
         },
         {
             name: "Спални",
-            registerPrice: "E848",
-            memberPrice: "E811",
+            description:
+                "Уютни и комфортни спални, създадени за пълноценна почивка.",
             src: "bedroom.jpg",
         },
         {
             name: "Други",
-            registerPrice: "E1795",
-            memberPrice: "E921",
+            description:
+                "Разнообразие от мебели и аксесоари за вашия дом и офис.",
             src: "others.jpg",
         },
     ];
@@ -57,11 +55,13 @@ const ProductCollection = () => {
                 {products.map((product, index) => (
                     <div key={index} className="group relative">
                         <div
-                            className="aspect-square bg-gray-100 rounded-lg mb-4 bg-cover bg-center"
+                            className="relative group aspect-square bg-gray-100 rounded-lg mb-4 bg-cover bg-center"
                             style={{
                                 backgroundImage: `url(/images/gallery/${product.src})`,
                             }}
-                        ></div>
+                        >
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg transition-opacity duration-300 opacity-100 group-hover:opacity-0"></div>
+                        </div>
 
                         <div className="space-y-2">
                             <h3 className="text-xl font-semibold">
@@ -72,24 +72,6 @@ const ProductCollection = () => {
                                     {product.description}
                                 </p>
                             )}
-                            <div className="flex justify-between items-center">
-                                <div>
-                                    <span className="text-xs text-gray-500">
-                                        Register{" "}
-                                    </span>
-                                    <span className="font-medium">
-                                        {product.registerPrice}
-                                    </span>
-                                </div>
-                                <div>
-                                    <span className="text-xs text-gray-500">
-                                        Member{" "}
-                                    </span>
-                                    <span className="font-medium">
-                                        {product.memberPrice}
-                                    </span>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 ))}

@@ -6,7 +6,9 @@ export const AboutSection = () => {
                 <div className="lg:w-1/2 relative">
                     <div className="relative aspect-square bg-gray-100 rounded-xl overflow-hidden">
                         {/* Main Image */}
-                        <div className="absolute inset-0 bg-[url('/images/gallery/about-image-1.jpg')] bg-cover bg-center"></div>
+                        <div className="absolute inset-0 bg-[url('/images/gallery/about-image-1.jpg')] bg-cover bg-center">
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg transition-opacity duration-300 opacity-100 group-hover:opacity-0"></div>
+                        </div>
 
                         {/* Decorative Element */}
                         <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-[url('/images/gallery/about-image-3.jpg')] rounded-xl border-8 border-white bg-cover bg-center"></div>
@@ -32,9 +34,9 @@ export const AboutSection = () => {
                     </h2>
 
                     <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto lg:mx-0">
-                        Изработваме мебели, които съчетават стил,
-                        комфорт и дълготрайно качество, за да придадат
-                        изтънченост на всяко пространство.
+                        Изработваме мебели, които съчетават стил, комфорт и
+                        дълготрайно качество, за да придадат изтънченост на
+                        всяко пространство.
                     </p>
 
                     <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors text-lg font-medium">
