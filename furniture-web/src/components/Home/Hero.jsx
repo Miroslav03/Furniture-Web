@@ -4,13 +4,13 @@ const HeroSection = () => {
     return (
         <div className="min-h-screen bg-[url('/images/gallery/bg-cover.jpg')] bg-cover bg-center relative">
             {/* Darker overlay for better contrast */}
-            <div className="absolute inset-0 bg-black/40"></div>
 
             {/* Transparent Navigation Bar */}
             <Navigation />
+            <div className="absolute inset-0 bg-black/40"></div>
 
             {/* Hero Content */}
-            <div className="relative z-10 container mx-auto px-6 md:px-16 h-[calc(100vh-120px)] flex items-center justify-center">
+            <div className="relative z-[1] container mx-auto px-6 md:px-16 h-[calc(100vh-120px)] flex items-center justify-center">
                 <div className="text-center text-white max-w-4xl">
                     <div className="mb-8">
                         <p className="text-lg font-semibold tracking-widest mb-4">
@@ -31,7 +31,7 @@ const HeroSection = () => {
                     </p>
 
                     <button className="bg-white text-black px-8 py-3 rounded-full hover:bg-gray-100 transition-colors text-lg font-medium">
-                       Разгледай сега
+                        Разгледай сега
                     </button>
                 </div>
             </div>
