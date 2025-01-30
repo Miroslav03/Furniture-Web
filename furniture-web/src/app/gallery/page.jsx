@@ -8,51 +8,306 @@ const GalleryPage = () => {
     const photos = [
         {
             id: 1,
-            src: "/images/gallery/contact-us.jpg",
-            orientation: "landscape",
-            type: "showroom",
+            src: "/images/gallery/heavy-1.jpg",
+            orientation: "square",
+            type: "heavy",
         },
         {
             id: 2,
-            src: "/images/gallery/test1.jpg",
+            src: "/images/gallery/heavy-2.jpg",
             orientation: "portrait",
-            type: "materials",
+            type: "heavy",
         },
         {
             id: 3,
-            src: "/images/gallery/test2.jpg",
-            orientation: "square",
-            type: "process",
+            src: "/images/gallery/heavy-3.jpg",
+            orientation: "portrait",
+            type: "heavy",
         },
         {
             id: 4,
-            src: "/images/gallery/test3.jpg",
-            orientation: "landscape",
-            type: "showroom",
+            src: "/images/gallery/heavy-4.jpg",
+            orientation: "portrait",
+            type: "heavy",
         },
         {
             id: 5,
-            src: "/images/gallery/test1.jpg",
+            src: "/images/gallery/heavy-5.jpg",
             orientation: "portrait",
-            type: "materials",
+            type: "heavy",
         },
         {
             id: 6,
-            src: "/gallery/6.jpg",
-            orientation: "landscape",
-            type: "finished",
+            src: "/images/gallery/heavy-6.jpg",
+            orientation: "portrait",
+            type: "heavy",
         },
         {
             id: 7,
-            src: "/gallery/7.jpg",
+            src: "/images/gallery/heavy-7.jpg",
             orientation: "portrait",
-            type: "process",
+            type: "heavy",
         },
         {
             id: 8,
-            src: "/gallery/8.jpg",
+            src: "/images/gallery/heavy-8.jpg",
+            orientation: "portrait",
+            type: "heavy",
+        },
+        {
+            id: 9,
+            src: "/images/gallery/heavy-9.jpg",
+            orientation: "portrait",
+            type: "heavy",
+        },
+        {
+            id: 10,
+            src: "/images/gallery/heavy-10.jpg",
+            orientation: "portrait",
+            type: "heavy",
+        },
+        {
+            id: 11,
+            src: "/images/gallery/heavy-11.jpg",
+            orientation: "portrait",
+            type: "heavy",
+        },
+        {
+            id: 12,
+            src: "/images/gallery/heavy-12.jpg",
+            orientation: "portrait",
+            type: "heavy",
+        },
+        {
+            id: 13,
+            src: "/images/gallery/heavy-13.jpg",
             orientation: "square",
-            type: "finished",
+            type: "heavy",
+        },
+        {
+            id: 14,
+            src: "/images/gallery/heavy-14.jpg",
+            orientation: "landscape",
+            type: "heavy",
+        },
+        //Kitchen
+        {
+            id: 15,
+            src: "/images/gallery/kitchen-1.jpg",
+            orientation: "landscape",
+            type: "kitchen",
+        },
+        {
+            id: 16,
+            src: "/images/gallery/kitchen-2.jpg",
+            orientation: "square",
+            type: "kitchen",
+        },
+        {
+            id: 17,
+            src: "/images/gallery/kitchen-3.jpg",
+            orientation: "portrait",
+            type: "kitchen",
+        },
+        {
+            id: 18,
+            src: "/images/gallery/kitchen-4.jpg",
+            orientation: "portrait",
+            type: "kitchen",
+        },
+        {
+            id: 19,
+            src: "/images/gallery/kitchen-5.jpg",
+            orientation: "portrait",
+            type: "kitchen",
+        },
+        {
+            id: 20,
+            src: "/images/gallery/kitchen-6.jpg",
+            orientation: "portrait",
+            type: "kitchen",
+        },
+        {
+            id: 21,
+            src: "/images/gallery/kitchen-7.jpg",
+            orientation: "portrait",
+            type: "kitchen",
+        },
+        {
+            id: 22,
+            src: "/images/gallery/kitchen-8.jpg",
+            orientation: "portrait",
+            type: "kitchen",
+        },
+        {
+            id: 23,
+            src: "/images/gallery/kitchen-9.jpg",
+            orientation: "square",
+            type: "kitchen",
+        },
+        {
+            id: 24,
+            src: "/images/gallery/kitchen-10.jpg",
+            orientation: "portrait",
+            type: "kitchen",
+        },
+        {
+            id: 25,
+            src: "/images/gallery/kitchen-11.jpg",
+            orientation: "landscape",
+            type: "kitchen",
+        },
+        //Wardrobes
+        {
+            id: 26,
+            src: "/images/gallery/wardrobe.jpg",
+            orientation: "portrait",
+            type: "wardrobe",
+        },
+        {
+            id: 27,
+            src: "/images/gallery/wardrobe-1.jpg",
+            orientation: "landscape",
+            type: "wardrobe",
+        },
+        {
+            id: 28,
+            src: "/images/gallery/wardrobe-2.jpg",
+            orientation: "portrait",
+            type: "wardrobe",
+        },
+        {
+            id: 29,
+            src: "/images/gallery/wardrobe-3.jpg",
+            orientation: "portrait",
+            type: "wardrobe",
+        },
+        {
+            id: 30,
+            src: "/images/gallery/wardrobe-4.jpg",
+            orientation: "portrait",
+            type: "wardrobe",
+        },
+        {
+            id: 31,
+            src: "/images/gallery/wardrobe-5.jpg",
+            orientation: "portrait",
+            type: "wardrobe",
+        },
+        {
+            id: 32,
+            src: "/images/gallery/wardrobe-6.jpg",
+            orientation: "portrait",
+            type: "wardrobe",
+        },
+        {
+            id: 33,
+            src: "/images/gallery/wardrobe-7.jpg",
+            orientation: "portrait",
+            type: "wardrobe",
+        },
+        {
+            id: 34,
+            src: "/images/gallery/wardrobe-8.jpg",
+            orientation: "portrait",
+            type: "wardrobe",
+        },
+        //Other
+        {
+            id: 35,
+            src: "/images/gallery/other-1.jpg",
+            orientation: "landscape",
+            type: "other",
+        },
+        {
+            id: 36,
+            src: "/images/gallery/other-2.jpg",
+            orientation: "landscape",
+            type: "other",
+        },
+        {
+            id: 37,
+            src: "/images/gallery/other-3.jpg",
+            orientation: "landscape",
+            type: "other",
+        },
+        {
+            id: 38,
+            src: "/images/gallery/other-4.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
+        {
+            id: 39,
+            src: "/images/gallery/other-5.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
+        {
+            id: 40,
+            src: "/images/gallery/other-6.jpg",
+            orientation: "landscape",
+            type: "other",
+        },
+        {
+            id: 41,
+            src: "/images/gallery/other-7.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
+        {
+            id: 42,
+            src: "/images/gallery/other-8.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
+        {
+            id: 43,
+            src: "/images/gallery/other-9.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
+        {
+            id: 44,
+            src: "/images/gallery/other-10.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
+        {
+            id: 45,
+            src: "/images/gallery/other-11.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
+        {
+            id: 46,
+            src: "/images/gallery/other-12.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
+        {
+            id: 47,
+            src: "/images/gallery/other-13.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
+        {
+            id: 48,
+            src: "/images/gallery/other-14.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
+        {
+            id: 49,
+            src: "/images/gallery/other-15.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
+        {
+            id: 50,
+            src: "/images/gallery/other-16.jpg",
+            orientation: "portrait",
+            type: "other",
         },
     ];
 
@@ -142,11 +397,11 @@ const GalleryPage = () => {
                             onChange={(e) => setSelectedType(e.target.value)}
                             className="px-4 py-2 border rounded-lg bg-white text-gray-700 focus:outline-none focus:border-gray-500"
                         >
-                            <option value="all">All Categories</option>
-                            <option value="showroom">Showroom</option>
-                            <option value="materials">Materials</option>
-                            <option value="process">Making Process</option>
-                            <option value="finished">Finished Pieces</option>
+                            <option value="all">Всички категории</option>
+                            <option value="kitchen">Кухни</option>
+                            <option value="heavy">Мебели от масив</option>
+                            <option value="wardrobe">Гардероби</option>
+                            <option value="other">Други</option>
                         </select>
                     </div>
                     <p className="text-gray-600 max-w-2xl mx-auto">
