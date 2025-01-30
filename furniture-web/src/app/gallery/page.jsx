@@ -309,6 +309,97 @@ const GalleryPage = () => {
             orientation: "portrait",
             type: "other",
         },
+        //Material
+        {
+            id: 51,
+            src: "/images/gallery/material-1.jpg",
+            orientation: "portrait",
+            type: "material",
+        },
+        {
+            id: 52,
+            src: "/images/gallery/material-2.jpg",
+            orientation: "portrait",
+            type: "material",
+        },
+        {
+            id: 53,
+            src: "/images/gallery/material-3.jpg",
+            orientation: "portrait",
+            type: "material",
+        },
+        {
+            id: 54,
+            src: "/images/gallery/material-4.jpg",
+            orientation: "portrait",
+            type: "material",
+        },
+        {
+            id: 55,
+            src: "/images/gallery/material-5.jpg",
+            orientation: "portrait",
+            type: "material",
+        },
+        {
+            id: 56,
+            src: "/images/gallery/material-6.jpg",
+            orientation: "portrait",
+            type: "material",
+        },
+        {
+            id: 57,
+            src: "/images/gallery/material-7.jpg",
+            orientation: "portrait",
+            type: "material",
+        },
+        {
+            id: 58,
+            src: "/images/gallery/material-8.jpg",
+            orientation: "portrait",
+            type: "material",
+        },
+        {
+            id: 59,
+            src: "/images/gallery/material-9.jpg",
+            orientation: "portrait",
+            type: "material",
+        },
+        {
+            id: 60,
+            src: "/images/gallery/material-10.jpg",
+            orientation: "portrait",
+            type: "material",
+        },
+        {
+            id: 61,
+            src: "/images/gallery/material-11.jpg",
+            orientation: "portrait",
+            type: "material",
+        },
+        {
+            id: 62,
+            src: "/images/gallery/material-12.jpg",
+            orientation: "portrait",
+            type: "material",
+        },
+        {
+            id: 63,
+            src: "/images/gallery/material-13.jpg",
+            orientation: "portrait",
+            type: "material",
+        },
+        {
+            id: 64,
+            src: "/images/gallery/material-14.jpg",
+            orientation: "portrait",
+            type: "material",
+        },
+        {
+            id: 65,
+            src: "/images/gallery/material-15.jpg",
+            orientation: "portrait",
+            type: "material",
+        },
     ];
 
     const filteredPhotos =
@@ -401,6 +492,7 @@ const GalleryPage = () => {
                             <option value="kitchen">Кухни</option>
                             <option value="heavy">Мебели от масив</option>
                             <option value="wardrobe">Гардероби</option>
+                            <option value="material">Материали</option>
                             <option value="other">Други</option>
                         </select>
                     </div>

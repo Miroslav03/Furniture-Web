@@ -19,10 +19,10 @@ const ProductCollection = () => {
             src: "wardrobe.jpg",
         },
         {
-            name: "Спални",
+            name: "Материали",
             description:
-                "Уютни и комфортни спални, създадени за пълноценна почивка.",
-            src: "bedroom.jpg",
+                "Висококачествени дървени материали за изработка на мебелите",
+            src: "material-home.jpg",
         },
         {
             name: "Други",
