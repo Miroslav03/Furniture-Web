@@ -11,12 +11,11 @@ export const Footer = () => {
             </div>
             
             <div>
-              <h4 className="font-semibold mb-4">Продукти</h4>
+              <h4 className="font-semibold mb-4">Галерия</h4>
               <ul className="space-y-2 text-gray-600">
                 <li><a href="#" className="hover:text-black transition-colors">Кухни</a></li>
                 <li><a href="#" className="hover:text-black transition-colors">Мебели от масив</a></li>
                 <li><a href="#" className="hover:text-black transition-colors">Гардероби</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">Спални</a></li>
                 <li><a href="#" className="hover:text-black transition-colors">Други</a></li>
               </ul>
             </div>
@@ -26,7 +25,6 @@ export const Footer = () => {
               <ul className="space-y-2 text-gray-600">
                 <li><a href="#" className="hover:text-black transition-colors">За нас</a></li>
                 <li><a href="#" className="hover:text-black transition-colors">Контакти</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">Галерия</a></li>
               </ul>
             </div>
           </div>
