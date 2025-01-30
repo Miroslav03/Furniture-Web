@@ -33,7 +33,7 @@ const ProductCollection = () => {
     ];
 
     return (
-        <div className="bg-white py-24 px-6 md:px-12 lg:px-24">
+        <div className="bg-white pt-24 pb-0 sm:pb-14 px-6 md:px-12 lg:px-24">
             <div className="max-w-4xl mb-16">
                 <h3 className="text-sm font-semibold text-gray-500 mb-4">
                     КОЛЕКЦИЯ
