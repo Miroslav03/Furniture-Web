@@ -423,36 +423,37 @@ const GalleryPage = () => {
                 </div>
             </div>
 
-            <section className="py-24 px-6 md:px-12 lg:px-24">
+            <section className="pb-12 pt-24 px-6 md:px-12 lg:px-24">
                 <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
                     <div className="space-y-8">
                         <h2 className="text-4xl font-light mb-6">
-                            Our Design Legacy
+                            Нашето дизайнерско наследство
                         </h2>
                         <p className="text-lg text-gray-600">
-                            Explore decades of design innovation through our
-                            curated gallery. Each image tells a story of
-                            meticulous craftsmanship, from initial sketches to
-                            final installations in homes worldwide.
+                            Разгледайте десетилетия на дизайнерски иновации в
+                            нашата специално подбрана галерия. Всяко изображение
+                            разказва историята на прецизната изработка – от
+                            първите скици до финалните инсталации в различни
+                            домове.
                         </p>
                         <div className="grid grid-cols-2 gap-8 mt-12">
                             <div>
                                 <h3 className="text-2xl font-light text-gray-800 mb-4">
-                                    Behind the Lens
+                                    Материали и работилница
                                 </h3>
                                 <p className="text-gray-600">
-                                    Professionally captured by architectural
-                                    photographers to showcase true material
-                                    textures and spatial relationships
+                                    Подбираме качествена дървесина и изработваме
+                                    всяко изделие с прецизност в нашата
+                                    занаятчийска работилница.
                                 </p>
                             </div>
                             <div>
                                 <h3 className="text-2xl font-light text-gray-800 mb-4">
-                                    Design Philosophy
+                                    Философия на дизайна
                                 </h3>
                                 <p className="text-gray-600">
-                                    Discover how light, form, and function unite
-                                    in our award-winning furniture collections
+                                    Всеки детайл е проектиран с мисъл за
+                                    хармония, функционалност и естетика.
                                 </p>
                             </div>
                         </div>
@@ -480,7 +481,7 @@ const GalleryPage = () => {
             <section className="pb-2 pt-24 px-6 md:px-12 lg:px-24">
                 <div className="max-w-7xl mx-auto text-center mb-20">
                     <h2 className="text-4xl font-light mb-6">
-                        Explore the Collection
+                        Разгледайте колекцията
                     </h2>
                     <div className="mb-8 flex justify-center">
                         <select
@@ -497,9 +498,8 @@ const GalleryPage = () => {
                         </select>
                     </div>
                     <p className="text-gray-600 max-w-2xl mx-auto">
-                        Browse through years of design excellence. Click any
-                        image to view in full detail and discover the story
-                        behind each piece.
+                        Разгледайте години на дизайнерско майсторство. Кликнете
+                        върху всяко изображение, за да го видите в детайли.
                     </p>
                 </div>
             </section>
