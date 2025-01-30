@@ -7,7 +7,7 @@ const HeroSection = () => {
 
             {/* Transparent Navigation Bar */}
             <Navigation />
-            <div className="absolute inset-0 bg-black/40"></div>
+            <div className="absolute inset-0 bg-black/40 z-0"></div>
 
             {/* Hero Content */}
             <div className="relative z-[1] container mx-auto px-6 md:px-16 h-[calc(100vh-120px)] flex items-center justify-center">

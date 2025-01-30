@@ -6,7 +6,7 @@ const ContactPage = () => {
             {/* Hero Section */}
             <div className="relative h-[600px] bg-[url('/images/gallery//contact-us.jpg')] bg-cover bg-center">
                 <Navigation />
-                <div className="absolute inset-0 bg-black/40"></div>
+                <div className="absolute inset-0 bg-black/40 z-0"></div>
                 <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="text-center text-white max-w-4xl px-4">
                         <h1 className="text-5xl md:text-7xl font-light mb-8 leading-tight">

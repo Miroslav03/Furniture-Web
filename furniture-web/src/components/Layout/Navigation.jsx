@@ -16,7 +16,7 @@ export default function Navigation() {
         }
     }, [isOpen]);
     return (
-        <nav className="relative z-10 flex items-center justify-between px-6 py-8 md:px-16">
+        <nav className="relative z-50 flex items-center justify-between px-6 py-8 md:px-16">
             <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-widest">
                 Raev Design
             </h1>
