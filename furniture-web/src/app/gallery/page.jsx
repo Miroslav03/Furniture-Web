@@ -415,9 +415,8 @@ const GalleryPage = () => {
                 <div className="relative z-10 h-full flex items-center justify-center">
                     <div className="text-center text-white max-w-4xl px-4">
                         <h1 className="text-5xl md:text-7xl font-light mb-8 leading-tight">
-                            Visual Poetry
-                            <br />
-                            in Design
+                            Естетика и занаят
+                            <br />в хармония
                         </h1>
                     </div>
                 </div>

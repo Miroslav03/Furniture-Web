@@ -6,7 +6,7 @@ export const Footer = () => {
             <div>
               <h3 className="text-2xl font-bold mb-4">Raev Design</h3>
               <p className="text-gray-600">
-                Crafting timeless furniture for modern living spaces since 2005.
+              Мебели, съчетаващи традиция и модерност от 1990 година.
               </p>
             </div>
             
