@@ -15,12 +15,6 @@ export default function Navigation() {
                     НАЧАЛО
                 </Link>
                 <Link
-                    href="/products"
-                    className="text-white/90 hover:text-white transition-colors text-lg"
-                >
-                    ПРОДУКТИ
-                </Link>
-                <Link
                     href="/gallery"
                     className="text-white/90 hover:text-white transition-colors text-lg"
                 >
