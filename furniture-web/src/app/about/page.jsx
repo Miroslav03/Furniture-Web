@@ -32,45 +32,45 @@ const AboutPage = () => {
                         </div>
                         <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-lg w-3/4">
                             <h3 className="text-2xl font-light mb-4">
-                                Since 2005
+                                Признати от 1990
                             </h3>
                             <p className="text-gray-600">
-                                Crafting quality furniture for discerning
-                                clients worldwide
+                                Изработка на качествени мебели за качествени
+                                клиенти
                             </p>
                         </div>
                     </div>
 
                     <div className="space-y-6">
                         <h2 className="text-4xl font-light mb-8">
-                            Our Journey
+                            Нашата история
                         </h2>
                         <p className="text-lg text-gray-600">
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Amet animi iusto quo non rem. Pariatur neque
-                            consequuntur nobis reiciendis tempora sed vitae
-                            molestias quisquam eaque commodi amet qui, possimus
-                            est?Lorem ipsum dolor sit amet consectetur
-                            adipisicing elit. Nihil itaque ducimus odio
-                            inventore labore, ut illum, quo nisi dolorum vero
+                            Три поколения – баща и двама синове, посветени на
+                            създаването на уникални мебели от масивна дървесина.
+                            Всяко изделие, което излиза от нашата работилница,
+                            носи не само красотата на естественото дърво, но и
+                            отпечатъка на семейното ни призвание, майсторството
+                            и вниманието към детайла.
                         </p>
                         <div className="grid grid-cols-2 gap-8 mt-12">
                             <div>
                                 <h3 className="text-2xl font-light text-gray-800 mb-4">
-                                    Our Philosophy
+                                    Нашата философия
                                 </h3>
                                 <p className="text-gray-600">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Aliquam, assumenda
+                                    Вярваме, че всяко изделие носи духа на
+                                    дървото и вниманието към детайла.
                                 </p>
                             </div>
                             <div>
                                 <h3 className="text-2xl font-light text-gray-800 mb-4">
-                                    Global Recognition
+                                    Доверие и качество
                                 </h3>
                                 <p className="text-gray-600">
-                                    Lorem ipsum dolor sit amet consectetur
-                                    adipisicing elit. Aliquam, assumenda
+                                    Нашите изделия съчетават занаятчийска
+                                    прецизност, естествена красота и внимание
+                                    към детайла.
                                 </p>
                             </div>
                         </div>
@@ -82,17 +82,17 @@ const AboutPage = () => {
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-20">
                         <h2 className="text-4xl font-light mb-6">
-                            Our Core Values
+                            Нашите основни ценности
                         </h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">
-                            The foundation of everything we create
+                            Основата на всичко което изработваме
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-4 gap-8">
                         {[
                             {
-                                title: "Quality Craftsmanship",
+                                title: "Качествена изработка",
                                 icon: (
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -110,10 +110,10 @@ const AboutPage = () => {
                                     </svg>
                                 ),
                                 description:
-                                    "Handcrafted using premium materials and time-honored techniques",
+                                    "Ръчно изработени с първокласни материали и утвърдени през времето техники.",
                             },
                             {
-                                title: "Timeless Design",
+                                title: "Вечен дизайн",
                                 icon: (
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -131,10 +131,10 @@ const AboutPage = () => {
                                     </svg>
                                 ),
                                 description:
-                                    "Creating pieces that transcend temporary trends",
+                                    "Създаваме мебели, които надхвърлят временните тенденции.",
                             },
                             {
-                                title: "Client-Centric",
+                                title: "Фокус върху клиента",
                                 icon: (
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -157,10 +157,10 @@ const AboutPage = () => {
                                     </svg>
                                 ),
                                 description:
-                                    "Personalized service from concept to delivery",
+                                    "Персонализирано обслужване – от концепцията до доставката.",
                             },
                             {
-                                title: "Sustainable Practices",
+                                title: "Устойчиви практики",
                                 icon: (
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -178,7 +178,7 @@ const AboutPage = () => {
                                     </svg>
                                 ),
                                 description:
-                                    "Ethically sourced materials and eco-friendly production",
+                                    "Етично добити материали и екологично съобразено производство.",
                             },
                         ].map((value, index) => (
                             <div
@@ -223,10 +223,10 @@ const AboutPage = () => {
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-20">
                         <h2 className="text-4xl font-light mb-6">
-                            The Minds Behind
+                            Хората зад нашите мебели
                         </h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">
-                            Our team of passionate designers and craftsmen
+                            Нашият екип от опитни майстори.
                         </p>
                     </div>
 
