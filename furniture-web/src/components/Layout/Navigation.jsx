@@ -56,7 +56,7 @@ export default function Navigation() {
 
             {/* Mobile Navigation */}
             <div
-                className={`md:hidden fixed top-20 left-0 right-0 bg-black/80 backdrop-blur-sm py-4 px-6
+                className={`md:hidden fixed top-20 left-0 right-0 bg-[black]/35 backdrop-blur-sm py-4 px-6
           transform transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)] z-50
           ${
               isOpen
