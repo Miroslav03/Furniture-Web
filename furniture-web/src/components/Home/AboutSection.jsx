@@ -71,7 +71,7 @@ export const AboutSection = () => {
                     </motion.h3>
 
                     <motion.h2
-                        className="text-4xl md:text-5xl font-light leading-tight mb-8"
+                        className="text-4xl sm:text-5xl font-light leading-tight mb-8"
                         variants={fadeInUp}
                     >
                         Изработваме качествени мебели
@@ -81,7 +81,7 @@ export const AboutSection = () => {
                     </motion.h2>
 
                     <motion.p
-                        className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto lg:mx-0"
+                        className="text-md sm:text-lg text-gray-600 mb-12 max-w-2xl mx-auto lg:mx-0"
                         variants={fadeInUp}
                     >
                         Изработваме мебели, които съчетават стил, комфорт и
@@ -91,7 +91,7 @@ export const AboutSection = () => {
 
                     <Link href={"/about"}>
                         <motion.button
-                            className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors text-lg font-medium"
+                            className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors text-md sm:text-lg font-medium"
                             variants={fadeInUp}
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}

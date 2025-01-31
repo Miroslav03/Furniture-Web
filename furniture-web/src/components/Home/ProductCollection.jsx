@@ -58,7 +58,7 @@ const ProductCollection = () => {
                 <motion.h3 className="text-sm font-semibold text-gray-500 mb-4">
                     КОЛЕКЦИЯ
                 </motion.h3>
-                <motion.h2 className="text-5xl font-light mb-6">
+                <motion.h2 className="text-4xl sm:text-5xl font-light mb-6">
                     Нашата Колекция Продукти
                 </motion.h2>
                 <motion.p className="text-gray-600 mb-8">

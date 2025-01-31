@@ -43,7 +43,7 @@ export const Footer = () => {
             </div>
           </div>
   
-          <div className="border-t pt-8 text-center text-gray-600">
+          <div className="border-t pt-8 text-center text-gray-600 text-sm sm:text-md">
             <p>Copyright © 2025 Raev Design | Powered by Raev Design</p>
           </div>
         </div>
