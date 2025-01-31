@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import Navigation from "@/components/Layout/Navigation";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -22,7 +22,7 @@ const AboutPage = () => {
                         transition={{ duration: 1.2, ease: "easeOut" }}
                         className="text-center text-white max-w-4xl px-4"
                     >
-                         <motion.h1
+                        <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{
@@ -41,66 +41,158 @@ const AboutPage = () => {
 
             {/* Our Story Section */}
             <section className="py-24 px-6 md:px-12 lg:px-24">
-            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-                {/* Image with Floating Card */}
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                    className="relative group"
-                >
-                    {/* Image with Smooth Zoom */}
-                    <motion.div
-                        initial={{ scale: 0.9, opacity: 0 }}
-                        animate={{ scale: 1, opacity: 1 }}
-                        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-                        className="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden"
-                    >
-                        <Image
-                            src="/images/gallery/about-owner.jpg"
-                            alt="Our workshop"
-                            className="w-full h-full object-cover transform group-hover:scale-105 transition-all rounded-xl"
-                            fill
-                        />
-                    </motion.div>
-
-                    {/* Floating Info Card */}
+                <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+                    {/* Image with Floating Card */}
                     <motion.div
                         initial={{ opacity: 0, y: 40 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
-                        className="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-lg w-3/4"
+                        transition={{ duration: 1, ease: "easeOut" }}
+                        className="relative group"
                     >
-                        <h3 className="text-2xl font-light mb-4">
-                            Признати от 1990
-                        </h3>
-                        <p className="text-gray-600">
-                            Изработка на качествени мебели за качествени клиенти
+                        {/* Image with Smooth Zoom */}
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{
+                                duration: 1,
+                                ease: "easeOut",
+                                delay: 0.3,
+                            }}
+                            className="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden"
+                        >
+                            <Image
+                                src="/images/gallery/about-owner.jpg"
+                                alt="Our workshop"
+                                className="w-full h-full object-cover transform group-hover:scale-105 transition-all rounded-xl"
+                                fill
+                            />
+                        </motion.div>
+
+                        {/* Floating Info Card */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{
+                                duration: 1,
+                                ease: "easeOut",
+                                delay: 0.5,
+                            }}
+                            className="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-lg w-3/4"
+                        >
+                            <h3 className="text-2xl font-light mb-4">
+                                Признати от 1990
+                            </h3>
+                            <p className="text-gray-600">
+                                Изработка на качествени мебели за качествени
+                                клиенти
+                            </p>
+                        </motion.div>
+                    </motion.div>
+
+                    {/* Text Section with Smooth Fade-in */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            duration: 1,
+                            ease: "easeOut",
+                            delay: 0.3,
+                        }}
+                        className="space-y-6"
+                    >
+                        <h2 className="text-4xl font-light mb-8">
+                            Нашата история
+                        </h2>
+                        <p className="text-lg text-gray-600">
+                            Три поколения – баща и двама синове, посветени на
+                            създаването на уникални мебели от масивна дървесина.
+                            Всяко изделие, което излиза от нашата работилница,
+                            носи не само красотата на естественото дърво, но и
+                            отпечатъка на семейното ни призвание, майсторството
+                            и вниманието към детайла.
+                        </p>
+
+                        {/* Philosophy & Quality Grid with Staggered Animation */}
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            variants={{
+                                hidden: { opacity: 0, y: 40 },
+                                visible: {
+                                    opacity: 1,
+                                    y: 0,
+                                    transition: {
+                                        delayChildren: 0.3,
+                                        staggerChildren: 0.3,
+                                    },
+                                },
+                            }}
+                            className="grid grid-cols-2 gap-8 mt-12"
+                        >
+                            <motion.div
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    visible: { opacity: 1, y: 0 },
+                                }}
+                                transition={{ duration: 1, ease: "easeOut" }}
+                            >
+                                <h3 className="text-2xl font-light text-gray-800 mb-4">
+                                    Нашата философия
+                                </h3>
+                                <p className="text-gray-600">
+                                    Вярваме, че всяко изделие носи духа на
+                                    дървото и вниманието към детайла.
+                                </p>
+                            </motion.div>
+                            <motion.div
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    visible: { opacity: 1, y: 0 },
+                                }}
+                                transition={{
+                                    duration: 1,
+                                    ease: "easeOut",
+                                    delay: 0.2,
+                                }}
+                            >
+                                <h3 className="text-2xl font-light text-gray-800 mb-4">
+                                    Доверие и качество
+                                </h3>
+                                <p className="text-gray-600">
+                                    Нашите изделия съчетават занаятчийска
+                                    прецизност, естествена красота и внимание
+                                    към детайла.
+                                </p>
+                            </motion.div>
+                        </motion.div>
+                    </motion.div>
+                </div>
+            </section>
+            {/* Values Section */}
+               {/* Values Section */}
+               <section className="bg-gray-50 py-24 px-6 md:px-12 lg:px-24">
+                <div className="max-w-7xl mx-auto">
+                    {/* Title with Fade-in */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, ease: "easeOut" }}
+                        className="text-center mb-20"
+                    >
+                        <h2 className="text-4xl font-light mb-6">
+                            Нашите основни ценности
+                        </h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto">
+                            Основата на всичко което изработваме
                         </p>
                     </motion.div>
-                </motion.div>
 
-                {/* Text Section with Smooth Fade-in */}
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
-                    className="space-y-6"
-                >
-                    <h2 className="text-4xl font-light mb-8">Нашата история</h2>
-                    <p className="text-lg text-gray-600">
-                        Три поколения – баща и двама синове, посветени на
-                        създаването на уникални мебели от масивна дървесина.
-                        Всяко изделие, което излиза от нашата работилница,
-                        носи не само красотата на естественото дърво, но и
-                        отпечатъка на семейното ни призвание, майсторството
-                        и вниманието към детайла.
-                    </p>
-
-                    {/* Philosophy & Quality Grid with Staggered Animation */}
+                    {/* Values Cards with Staggered Animation */}
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
@@ -110,53 +202,11 @@ const AboutPage = () => {
                             visible: {
                                 opacity: 1,
                                 y: 0,
-                                transition: { delayChildren: 0.3, staggerChildren: 0.3 }
+                                transition: { delayChildren: 0.2, staggerChildren: 0.2 }
                             }
                         }}
-                        className="grid grid-cols-2 gap-8 mt-12"
+                        className="grid md:grid-cols-4 gap-8"
                     >
-                        <motion.div
-                            variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-                            transition={{ duration: 1, ease: "easeOut" }}
-                        >
-                            <h3 className="text-2xl font-light text-gray-800 mb-4">
-                                Нашата философия
-                            </h3>
-                            <p className="text-gray-600">
-                                Вярваме, че всяко изделие носи духа на
-                                дървото и вниманието към детайла.
-                            </p>
-                        </motion.div>
-                        <motion.div
-                            variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-                            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
-                        >
-                            <h3 className="text-2xl font-light text-gray-800 mb-4">
-                                Доверие и качество
-                            </h3>
-                            <p className="text-gray-600">
-                                Нашите изделия съчетават занаятчийска
-                                прецизност, естествена красота и внимание
-                                към детайла.
-                            </p>
-                        </motion.div>
-                    </motion.div>
-                </motion.div>
-            </div>
-        </section>
-            {/* Values Section */}
-            <section className="bg-gray-50 py-24 px-6 md:px-12 lg:px-24">
-                <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-20">
-                        <h2 className="text-4xl font-light mb-6">
-                            Нашите основни ценности
-                        </h2>
-                        <p className="text-gray-600 max-w-2xl mx-auto">
-                            Основата на всичко което изработваме
-                        </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-4 gap-8">
                         {[
                             {
                                 title: "Качествена изработка",
@@ -248,8 +298,10 @@ const AboutPage = () => {
                                     "Етично добити материали и екологично съобразено производство.",
                             },
                         ].map((value, index) => (
-                            <div
+                            <motion.div
                                 key={index}
+                                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+                                transition={{ duration: 1, ease: "easeOut" }}
                                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
                             >
                                 <div className="mb-6">{value.icon}</div>
@@ -259,32 +311,42 @@ const AboutPage = () => {
                                 <p className="text-gray-600">
                                     {value.description}
                                 </p>
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </section>
+
             {/* Achievements Section */}
-            <div className="bg-black text-white py-24 px-6 md:px-12 lg:px-24">
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={{
+                    hidden: { opacity: 0 },
+                    visible: { opacity: 1, transition: { staggerChildren: 0.3 } }
+                }}
+                className="bg-black text-white py-24 px-6 md:px-12 lg:px-24"
+            >
                 <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-8 text-center">
-                    <div className="p-6">
-                        <div className="text-5xl font-light mb-4">20+</div>
-                        <div className="text-gray-400">Години Опит</div>
-                    </div>
-                    <div className="p-6">
-                        <div className="text-5xl font-light mb-4">5000+</div>
-                        <div className="text-gray-400">Изработени Мебели</div>
-                    </div>
-                    <div className="p-6">
-                        <div className="text-5xl font-light mb-4">1000+</div>
-                        <div className="text-gray-400">Доволни клиенти</div>
-                    </div>
-                    <div className="p-6">
-                        <div className="text-5xl font-light mb-4">100+</div>
-                        <div className="text-gray-400">Уникални Модели</div>
-                    </div>
+                    {[
+                        { number: "20+", label: "Години Опит" },
+                        { number: "5000+", label: "Изработени Мебели" },
+                        { number: "1000+", label: "Доволни клиенти" },
+                        { number: "100+", label: "Уникални Модели" },
+                    ].map((item, index) => (
+                        <motion.div
+                            key={index}
+                            variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                            className="p-6"
+                        >
+                            <div className="text-5xl font-light mb-4">{item.number}</div>
+                            <div className="text-gray-400">{item.label}</div>
+                        </motion.div>
+                    ))}
                 </div>
-            </div>
+            </motion.div>
             {/* Team Section */}
             <section className="py-24 px-6 md:px-12 lg:px-24">
                 <div className="max-w-7xl mx-auto">
