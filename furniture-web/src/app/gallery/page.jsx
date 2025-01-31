@@ -2,6 +2,8 @@
 import Navigation from "@/components/Layout/Navigation";
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { motion } from "framer-motion";
+
 const GalleryPage = () => {
     const searchParams = useSearchParams();
     const type = searchParams.get("type");
@@ -432,15 +434,39 @@ const GalleryPage = () => {
         <div className="bg-white">
             {/* Hero Section */}
             <div className="relative h-[600px] bg-[url('/images/gallery/gallery-hero.jpg')] bg-cover bg-center">
+                {/* Transparent Navigation Bar */}
                 <Navigation />
-                <div className="absolute inset-0 bg-black/40"></div>
+
+                {/* Background Overlay with Smooth Fade-in */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.4 }}
+                    transition={{ duration: 1 }}
+                    className="absolute inset-0 bg-black"
+                ></motion.div>
+
+                {/* Hero Content */}
                 <div className="relative z-10 h-full flex items-center justify-center">
-                    <div className="text-center text-white max-w-4xl px-4">
-                        <h1 className="text-5xl md:text-7xl font-light mb-8 leading-tight">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        className="text-center text-white max-w-4xl px-4"
+                    >
+                        <motion.h1
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 1.2,
+                                ease: "easeOut",
+                                delay: 0.3,
+                            }}
+                            className="text-5xl md:text-7xl font-light mb-8 leading-tight"
+                        >
                             Естетика и занаят
                             <br />в хармония
-                        </h1>
-                    </div>
+                        </motion.h1>
+                    </motion.div>
                 </div>
             </div>
 
