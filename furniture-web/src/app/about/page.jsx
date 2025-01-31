@@ -30,7 +30,7 @@ const AboutPage = () => {
                                 ease: "easeOut",
                                 delay: 0.3,
                             }}
-                            className="text-4xl sm:text-5xl md:text-7xl font-light mb-8 sm:mb-[12rem] leading-tight"
+                            className="text-4xl sm:text-5xl md:text-7xl font-light mb-[12rem] sm:mb-8 leading-tight"
                         >
                             Създаване на мебели
                             <br />с Изключителен Дизайн
