@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const Footer = () => {
     return (
       <footer className="bg-gray-50 py-12 px-6 md:px-12 lg:px-24">
@@ -13,18 +15,30 @@ export const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Галерия</h4>
               <ul className="space-y-2 text-gray-600">
-                <li><a href="#" className="hover:text-black transition-colors">Кухни</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">Мебели от масив</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">Гардероби</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">Други</a></li>
+                <li><Link href={{
+                            pathname: "/gallery",
+                            query: { type: 'kitchen' },
+                        }} className="hover:text-black transition-colors">Кухни</Link></li>
+                <li><Link href={{
+                            pathname: "/gallery",
+                            query: { type: 'heavy' },
+                        }} className="hover:text-black transition-colors">Мебели от масив</Link></li>
+                <li><Link href={{
+                            pathname: "/gallery",
+                            query: { type: 'wardrobe' },
+                        }} className="hover:text-black transition-colors">Гардероби</Link></li>
+                <li><Link href={{
+                            pathname: "/gallery",
+                            query: { type: 'other' },
+                        }} className="hover:text-black transition-colors">Други</Link></li>
               </ul>
             </div>
   
             <div>
               <h4 className="font-semibold mb-4">Информация</h4>
               <ul className="space-y-2 text-gray-600">
-                <li><a href="#" className="hover:text-black transition-colors">За нас</a></li>
-                <li><a href="#" className="hover:text-black transition-colors">Контакти</a></li>
+                <li><Link href="/about" className="hover:text-black transition-colors">За нас</Link></li>
+                <li><Link href="/contact-us" className="hover:text-black transition-colors">Контакти</Link></li>
               </ul>
             </div>
           </div>
