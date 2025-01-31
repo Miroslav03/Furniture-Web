@@ -1,9 +1,5 @@
-import { Suspense } from 'react';
+import { Suspense } from "react";
 
-export default function GalleryLayout(){
-  return (
-    <Suspense >
-      {children}
-    </Suspense>
-  );
+export default function GalleryLayout({ children }) {
+    return <Suspense>{children}</Suspense>;
 }
