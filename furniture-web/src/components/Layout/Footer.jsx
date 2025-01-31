@@ -13,8 +13,8 @@ export const Footer = () => {
             </div>
             
             <div>
-              <h4 className="font-semibold mb-4">Галерия</h4>
-              <ul className="space-y-2 text-gray-600">
+              <h4 className="font-semibold mb-4 ">Галерия</h4>
+              <ul className="space-y-2 text-gray-600 text-sm sm:text-md">
                 <li><Link href={{
                             pathname: "/gallery",
                             query: { type: 'kitchen' },
@@ -36,7 +36,7 @@ export const Footer = () => {
   
             <div>
               <h4 className="font-semibold mb-4">Информация</h4>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 text-sm sm:text-md">
                 <li><Link href="/about" className="hover:text-black transition-colors">За нас</Link></li>
                 <li><Link href="/contact-us" className="hover:text-black transition-colors">Контакти</Link></li>
               </ul>
