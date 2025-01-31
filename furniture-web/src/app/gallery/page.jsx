@@ -471,20 +471,89 @@ const GalleryPage = () => {
             </div>
 
             <section className="pb-12 pt-24 px-6 md:px-12 lg:px-24">
-                <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-                    <div className="space-y-8">
-                        <h2 className="text-4xl font-light mb-6">
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center"
+                >
+                    {/* Left Text Content */}
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={{
+                            hidden: { opacity: 0, y: 50 },
+                            visible: {
+                                opacity: 1,
+                                y: 0,
+                                transition: {
+                                    duration: 1.8,
+                                    ease: "easeOut",
+                                    delayChildren: 0.4,
+                                    staggerChildren: 0.5,
+                                },
+                            },
+                        }}
+                        className="space-y-8"
+                    >
+                        <motion.h2
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0 },
+                            }}
+                            transition={{ duration: 1.5, ease: "easeOut" }}
+                            className="text-4xl font-light mb-6"
+                        >
                             Нашето дизайнерско наследство
-                        </h2>
-                        <p className="text-lg text-gray-600">
+                        </motion.h2>
+
+                        <motion.p
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0 },
+                            }}
+                            transition={{
+                                duration: 1.8,
+                                ease: "easeOut",
+                                delay: 0.3,
+                            }}
+                            className="text-lg text-gray-600"
+                        >
                             Разгледайте десетилетия на дизайнерски иновации в
                             нашата специално подбрана галерия. Всяко изображение
                             разказва историята на прецизната изработка – от
                             първите скици до финалните инсталации в различни
                             домове.
-                        </p>
-                        <div className="grid grid-cols-2 gap-8 mt-12">
-                            <div>
+                        </motion.p>
+
+                        {/* Staggered Text Cards */}
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            variants={{
+                                hidden: { opacity: 0, y: 40 },
+                                visible: {
+                                    opacity: 1,
+                                    y: 0,
+                                    transition: {
+                                        duration: 1.5,
+                                        ease: "easeOut",
+                                        delayChildren: 0.6,
+                                        staggerChildren: 0.6,
+                                    },
+                                },
+                            }}
+                            className="grid grid-cols-2 gap-8 mt-12"
+                        >
+                            <motion.div
+                                variants={{
+                                    hidden: { opacity: 0, y: 40 },
+                                    visible: { opacity: 1, y: 0 },
+                                }}
+                            >
                                 <h3 className="text-2xl font-light text-gray-800 mb-4">
                                     Материали и работилница
                                 </h3>
@@ -493,8 +562,13 @@ const GalleryPage = () => {
                                     всяко изделие с прецизност в нашата
                                     занаятчийска работилница.
                                 </p>
-                            </div>
-                            <div>
+                            </motion.div>
+                            <motion.div
+                                variants={{
+                                    hidden: { opacity: 0, y: 40 },
+                                    visible: { opacity: 1, y: 0 },
+                                }}
+                            >
                                 <h3 className="text-2xl font-light text-gray-800 mb-4">
                                     Философия на дизайна
                                 </h3>
@@ -502,42 +576,83 @@ const GalleryPage = () => {
                                     Всеки детайл е проектиран с мисъл за
                                     хармония, функционалност и естетика.
                                 </p>
-                            </div>
-                        </div>
-                    </div>
+                            </motion.div>
+                        </motion.div>
+                    </motion.div>
 
-                    <div className="grid grid-cols-2 gap-6">
-                        <div className="aspect-square bg-gray-100 rounded-xl overflow-hidden">
+                    {/* Right Image Grid */}
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={{
+                            hidden: { opacity: 0, scale: 0.92 },
+                            visible: {
+                                opacity: 1,
+                                scale: 1,
+                                transition: {
+                                    duration: 1.5,
+                                    ease: "easeOut",
+                                    delay: 0.5,
+                                },
+                            },
+                        }}
+                        className="grid grid-cols-2 gap-6"
+                    >
+                        <motion.div
+                            whileHover={{ scale: 1.03 }}
+                            transition={{ duration: 0.5, ease: "easeOut" }}
+                            className="aspect-square bg-gray-100 rounded-xl overflow-hidden"
+                        >
                             <img
                                 src="/images/gallery/factory.jpg"
                                 alt="Design studio"
-                                className="w-full h-full object-cover hover:scale-105 transition-transform"
+                                className="w-full h-full object-cover transition-transform"
                             />
-                        </div>
-                        <div className="aspect-[3/4] bg-gray-100 rounded-xl overflow-hidden mt-12">
+                        </motion.div>
+                        <motion.div
+                            whileHover={{ scale: 1.03 }}
+                            transition={{ duration: 0.5, ease: "easeOut" }}
+                            className="aspect-[3/4] bg-gray-100 rounded-xl overflow-hidden mt-12"
+                        >
                             <img
                                 src="/images/gallery/material-closeup.jpg"
                                 alt="Material closeup"
-                                className="w-full h-full object-cover hover:scale-105 transition-transform"
+                                className="w-full h-full object-cover transition-transform"
                             />
-                        </div>
-                    </div>
-                </div>
+                        </motion.div>
+                    </motion.div>
+                </motion.div>
             </section>
 
-            <section
+            <motion.section
                 ref={collectionRef}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1.5, ease: "easeOut" }}
                 className="pb-2 pt-24 px-6 md:px-12 lg:px-24"
             >
-                <div className="max-w-7xl mx-auto text-center mb-20">
-                    <h2 className="text-4xl font-light mb-6">
-                        Разгледайте колекцията
-                    </h2>
-                    <div className="mb-8 flex justify-center">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                    className="max-w-7xl mx-auto text-center mb-20"
+                >
+                    <h2 className="text-4xl font-light mb-6">Разгледайте колекцията</h2>
+
+                    {/* Category Selector with Smooth Transition */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+                        className="mb-8 flex justify-center"
+                    >
                         <select
                             value={selectedType}
                             onChange={(e) => setSelectedType(e.target.value)}
-                            className="px-4 py-2 border rounded-lg bg-white text-gray-700 focus:outline-none focus:border-gray-500"
+                            className="px-4 py-2 border rounded-lg bg-white text-gray-700 focus:outline-none focus:border-gray-500 transition-all duration-500"
                         >
                             <option value="all">Всички категории</option>
                             <option value="kitchen">Кухни</option>
@@ -546,13 +661,20 @@ const GalleryPage = () => {
                             <option value="material">Материали</option>
                             <option value="other">Други</option>
                         </select>
-                    </div>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                    </motion.div>
+
+                    <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 1.4, delay: 0.6, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                        className="text-gray-600 max-w-2xl mx-auto"
+                    >
                         Разгледайте години на дизайнерско майсторство. Кликнете
                         върху всяко изображение, за да го видите в детайли.
-                    </p>
-                </div>
-            </section>
+                    </motion.p>
+                </motion.div>
+            </motion.section>
 
             {/* Gallery Grid */}
             <section className="pb-24 pt-2 px-6 md:px-12 lg:px-24">
