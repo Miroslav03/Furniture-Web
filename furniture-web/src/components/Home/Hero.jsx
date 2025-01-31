@@ -37,10 +37,10 @@ const HeroSection = () => {
                         transition={{ duration: 1.2, ease: "easeOut", delay: 0.3 }}
                         className="mb-8"
                     >
-                        <p className="text-lg font-semibold tracking-widest mb-4">
+                        <p className="text-md font-semibold tracking-widest mb-4">
                             ОФЕРТА ЗА НАЙ-ДОБЪР ИНТЕРИОР
                         </p>
-                        <h1 className="text-5xl md:text-7xl font-light mb-6 leading-tight">
+                        <h1 className="text-4xl md:text-7xl font-light mb-6 leading-tight">
                             Естетично пространство и
                             <br />
                             хармония
@@ -51,7 +51,7 @@ const HeroSection = () => {
                         initial={{ opacity: 0, y: 20 }} 
                         animate={{ opacity: 1, y: 0 }} 
                         transition={{ duration: 1.4, ease: "easeOut", delay: 0.5 }}
-                        className="text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto leading-relaxed"
+                        className="text-md md:text-xl font-light mb-12 max-w-2xl mx-auto leading-relaxed"
                     >
                         Променете своя поглед и открийте подреден и естетичен
                         кът у дома, който ще впечатли всички, особено вашето
