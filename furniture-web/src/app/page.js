@@ -7,7 +7,9 @@ export default function Home() {
     return (
         <div>
             <Hero />
-            <ProductCollection />
+            <div id="product-section">
+                <ProductCollection />
+            </div>
             <AboutSection />
             <CTASection />
         </div>

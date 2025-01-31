@@ -1,6 +1,14 @@
+"use client";
 import Navigation from "../Layout/Navigation";
 
 const HeroSection = () => {
+    const scrollToProducts = () => {
+        const section = document.getElementById("product-section");
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <div className="min-h-screen bg-[url('/images/gallery/bg-cover.jpg')] bg-cover bg-center relative">
             {/* Darker overlay for better contrast */}
@@ -30,7 +38,10 @@ const HeroSection = () => {
                         обзавеждане в ценен и стилен елемент още сега.
                     </p>
 
-                    <button className="bg-white text-black px-8 py-3 rounded-full hover:bg-gray-100 transition-colors text-lg font-medium">
+                    <button
+                        onClick={scrollToProducts}
+                        className="bg-white text-black px-8 py-3 rounded-full hover:bg-gray-100 transition-colors text-lg font-medium"
+                    >
                         Разгледай сега
                     </button>
                 </div>

@@ -7,30 +7,35 @@ const ProductCollection = () => {
             description:
                 "Модерни и класически кухни, проектирани за удобство и стил.",
             src: "home-kitchen.jpg",
+            type: "kitchen",
         },
         {
             name: "Мебели от масив",
             description:
                 "Качествени мебели от масивно дърво, съчетаващи издръжливост и елегантност.",
             src: "furniture-solid.jpg",
+            type: "heavy",
         },
         {
             name: "Гардероби",
             description:
                 "Функционални и стилни гардероби за оптимално съхранение на вашите дрехи.",
             src: "wardrobe.jpg",
+            type: "wardrobe",
         },
         {
             name: "Материали",
             description:
                 "Висококачествени дървени материали за изработка на мебелите",
             src: "material-home.jpg",
+            type: "material",
         },
         {
             name: "Други",
             description:
                 "Разнообразие от мебели и аксесоари за вашия дом и офис.",
             src: "others.jpg",
+            type: "other",
         },
     ];
 
@@ -48,7 +53,7 @@ const ProductCollection = () => {
                     първокласни мебели, съчетаваща вечен дизайн, изключително
                     качество и модерен комфорт.
                 </p>
-                <Link href={'/gallery'}>
+                <Link href={"/gallery"}>
                     <button className="bg-black text-white px-8 py-3 rounded-full  hover:bg-gray-800 transition-colors ">
                         Открий
                     </button>
@@ -57,27 +62,38 @@ const ProductCollection = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                 {products.map((product, index) => (
-                    <div key={index} className="group relative cursor-pointer">
+                    <Link
+                        key={index}
+                        href={{
+                            pathname: "/gallery",
+                            query: { type: product.type },
+                        }}
+                    >
                         <div
-                            className="relative group aspect-square bg-gray-100 rounded-lg mb-4 bg-cover bg-center"
-                            style={{
-                                backgroundImage: `url(/images/gallery/${product.src})`,
-                            }}
+                            key={index}
+                            className="group relative cursor-pointer"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg transition-opacity duration-300 opacity-100 group-hover:opacity-0"></div>
-                        </div>
+                            <div
+                                className="relative group aspect-square bg-gray-100 rounded-lg mb-4 bg-cover bg-center"
+                                style={{
+                                    backgroundImage: `url(/images/gallery/${product.src})`,
+                                }}
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg transition-opacity duration-300 opacity-100 group-hover:opacity-0"></div>
+                            </div>
 
-                        <div className="space-y-2">
-                            <h3 className="text-xl font-semibold">
-                                {product.name}
-                            </h3>
-                            {product.description && (
-                                <p className="text-sm text-gray-600 mb-2">
-                                    {product.description}
-                                </p>
-                            )}
+                            <div className="space-y-2">
+                                <h3 className="text-xl font-semibold">
+                                    {product.name}
+                                </h3>
+                                {product.description && (
+                                    <p className="text-sm text-gray-600 mb-2">
+                                        {product.description}
+                                    </p>
+                                )}
+                            </div>
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
 

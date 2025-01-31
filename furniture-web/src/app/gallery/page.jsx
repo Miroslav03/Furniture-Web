@@ -1,10 +1,32 @@
 "use client";
 import Navigation from "@/components/Layout/Navigation";
-import { useState } from "react";
-
+import { useEffect, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 const GalleryPage = () => {
+    const searchParams = useSearchParams();
+    const type = searchParams.get("type");
+    const collectionRef = useRef();
+
     const [selectedPhoto, setSelectedPhoto] = useState(null);
     const [selectedType, setSelectedType] = useState("all");
+
+    useEffect(() => {
+        if (type) {
+            setSelectedType(type);
+        } else {
+            setSelectedType("all");
+        }
+    }, [type]);
+
+    useEffect(() => {
+        if (type && collectionRef.current) {
+            collectionRef.current?.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+            });
+        }
+    }, [type]);
+
     const photos = [
         {
             id: 1,
@@ -477,7 +499,10 @@ const GalleryPage = () => {
                 </div>
             </section>
 
-            <section className="pb-2 pt-24 px-6 md:px-12 lg:px-24">
+            <section
+                ref={collectionRef}
+                className="pb-2 pt-24 px-6 md:px-12 lg:px-24"
+            >
                 <div className="max-w-7xl mx-auto text-center mb-20">
                     <h2 className="text-4xl font-light mb-6">
                         Разгледайте колекцията
