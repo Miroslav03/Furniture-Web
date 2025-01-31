@@ -461,7 +461,7 @@ const GalleryPage = () => {
                                 ease: "easeOut",
                                 delay: 0.3,
                             }}
-                            className="text-4xl md:text-7xl font-light mb-8 leading-tight"
+                            className="text-4xl md:text-7xl font-light mb-8 sm:mb-[12rem] leading-tight"
                         >
                             Естетика и занаят
                             <br />в хармония
