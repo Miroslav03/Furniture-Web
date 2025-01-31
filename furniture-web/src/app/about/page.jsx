@@ -173,8 +173,7 @@ const AboutPage = () => {
                 </div>
             </section>
             {/* Values Section */}
-               {/* Values Section */}
-               <section className="bg-gray-50 py-24 px-6 md:px-12 lg:px-24">
+            <section className="bg-gray-50 py-24 px-6 md:px-12 lg:px-24">
                 <div className="max-w-7xl mx-auto">
                     {/* Title with Fade-in */}
                     <motion.div
@@ -202,8 +201,11 @@ const AboutPage = () => {
                             visible: {
                                 opacity: 1,
                                 y: 0,
-                                transition: { delayChildren: 0.2, staggerChildren: 0.2 }
-                            }
+                                transition: {
+                                    delayChildren: 0.2,
+                                    staggerChildren: 0.2,
+                                },
+                            },
                         }}
                         className="grid md:grid-cols-4 gap-8"
                     >
@@ -300,7 +302,10 @@ const AboutPage = () => {
                         ].map((value, index) => (
                             <motion.div
                                 key={index}
-                                variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    visible: { opacity: 1, y: 0 },
+                                }}
                                 transition={{ duration: 1, ease: "easeOut" }}
                                 className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow"
                             >
@@ -316,7 +321,6 @@ const AboutPage = () => {
                     </motion.div>
                 </div>
             </section>
-
             {/* Achievements Section */}
             <motion.div
                 initial="hidden"
@@ -324,7 +328,10 @@ const AboutPage = () => {
                 viewport={{ once: true }}
                 variants={{
                     hidden: { opacity: 0 },
-                    visible: { opacity: 1, transition: { staggerChildren: 0.3 } }
+                    visible: {
+                        opacity: 1,
+                        transition: { staggerChildren: 0.3 },
+                    },
                 }}
                 className="bg-black text-white py-24 px-6 md:px-12 lg:px-24"
             >
@@ -337,11 +344,16 @@ const AboutPage = () => {
                     ].map((item, index) => (
                         <motion.div
                             key={index}
-                            variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+                            variants={{
+                                hidden: { opacity: 0, y: 30 },
+                                visible: { opacity: 1, y: 0 },
+                            }}
                             transition={{ duration: 1, ease: "easeOut" }}
                             className="p-6"
                         >
-                            <div className="text-5xl font-light mb-4">{item.number}</div>
+                            <div className="text-5xl font-light mb-4">
+                                {item.number}
+                            </div>
                             <div className="text-gray-400">{item.label}</div>
                         </motion.div>
                     ))}
@@ -350,25 +362,67 @@ const AboutPage = () => {
             {/* Team Section */}
             <section className="py-24 px-6 md:px-12 lg:px-24">
                 <div className="max-w-7xl mx-auto">
-                    <div className="text-center mb-20">
+                    {/* Title with Fade-in */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, ease: "easeOut" }}
+                        className="text-center mb-20"
+                    >
                         <h2 className="text-4xl font-light mb-6">
                             Хората зад нашите мебели
                         </h2>
                         <p className="text-gray-600 max-w-2xl mx-auto">
                             Нашият екип от опитни майстори.
                         </p>
-                    </div>
+                    </motion.div>
 
-                    <div className="grid md:grid-cols-3 gap-12">
-                        {[1, 2, 3].map((item) => (
-                            <div key={item} className="group relative">
-                                <div className="aspect-square bg-gray-100 rounded-xl overflow-hidden mb-6">
+                    {/* Team Members with Staggered Appearance */}
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={{
+                            hidden: { opacity: 0, y: 40 },
+                            visible: {
+                                opacity: 1,
+                                y: 0,
+                                transition: {
+                                    delayChildren: 0.2,
+                                    staggerChildren: 0.2,
+                                },
+                            },
+                        }}
+                        className="grid md:grid-cols-3 gap-12"
+                    >
+                        {[1, 2, 3].map((item, index) => (
+                            <motion.div
+                                key={item}
+                                variants={{
+                                    hidden: { opacity: 0, y: 30 },
+                                    visible: { opacity: 1, y: 0 },
+                                }}
+                                transition={{ duration: 1, ease: "easeOut" }}
+                                className="group relative"
+                            >
+                                {/* Team Member Image with Hover Zoom */}
+                                <motion.div
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{
+                                        duration: 0.3,
+                                        ease: "easeOut",
+                                    }}
+                                    className="aspect-square bg-gray-100 rounded-xl overflow-hidden mb-6"
+                                >
                                     <img
                                         src={`/team-${item}.jpg`}
                                         alt="Team member"
-                                        className="w-full h-full object-cover transform group-hover:scale-105 transition-all"
+                                        className="w-full h-full object-cover transform transition-all"
                                     />
-                                </div>
+                                </motion.div>
+
+                                {/* Team Member Details */}
                                 <div className="text-center">
                                     <h3 className="text-2xl font-light mb-2">
                                         Alexandra Wood
@@ -381,14 +435,20 @@ const AboutPage = () => {
                                         design
                                     </p>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
             </section>
 
             {/* CTA Section */}
-            <div className="bg-gray-50 py-24 px-6 md:px-12 lg:px-24">
+            <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, ease: "easeOut" }}
+                className="bg-gray-50 py-24 px-6 md:px-12 lg:px-24"
+            >
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-4xl font-light mb-8">
                         Готови ли сте да преобразите вашия интериор?
@@ -397,11 +457,18 @@ const AboutPage = () => {
                         Нека създадем нещо уникално заедно. Запишете се за
                         безплатна консултация с нашите майстори мебелисти.
                     </p>
-                    <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors text-lg font-medium">
+
+                    {/* Animated Button */}
+                    <motion.button
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors text-lg font-medium"
+                    >
                         Запишете се сега
-                    </button>
+                    </motion.button>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 };
