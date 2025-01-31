@@ -461,7 +461,7 @@ const GalleryPage = () => {
                                 ease: "easeOut",
                                 delay: 0.3,
                             }}
-                            className="text-5xl md:text-7xl font-light mb-8 leading-tight"
+                            className="text-4xl md:text-7xl font-light mb-8 leading-tight"
                         >
                             Естетика и занаят
                             <br />в хармония
@@ -518,7 +518,7 @@ const GalleryPage = () => {
                                 ease: "easeInOut",
                                 delay: 0.2,
                             }}
-                            className="text-lg text-gray-600"
+                            className="text-md sm:text-lg text-gray-600"
                         >
                             Разгледайте десетилетия на дизайнерски иновации в
                             нашата специално подбрана галерия. Всяко изображение
@@ -555,7 +555,7 @@ const GalleryPage = () => {
                                 <h3 className="text-2xl font-light text-gray-800 mb-4">
                                     Материали и работилница
                                 </h3>
-                                <p className="text-gray-600">
+                                <p className="text-gray-600 text-md">
                                     Подбираме качествена дървесина и изработваме
                                     всяко изделие с прецизност в нашата
                                     занаятчийска работилница.
@@ -570,7 +570,7 @@ const GalleryPage = () => {
                                 <h3 className="text-2xl font-light text-gray-800 mb-4">
                                     Философия на дизайна
                                 </h3>
-                                <p className="text-gray-600">
+                                <p className="text-gray-600 text-md">
                                     Всеки детайл е проектиран с мисъл за
                                     хармония, функционалност и естетика.
                                 </p>
