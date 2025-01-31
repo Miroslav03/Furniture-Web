@@ -432,7 +432,7 @@ const GalleryPage = () => {
             ? photos
             : photos.filter((photo) => photo.type === selectedType);
     return (
-        <Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
             <div className="bg-white">
                 {/* Hero Section */}
                 <div className="relative h-[600px] bg-[url('/images/gallery/gallery-hero.jpg')] bg-cover bg-center">
