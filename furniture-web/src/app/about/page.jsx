@@ -458,15 +458,26 @@ const AboutPage = () => {
                         безплатна консултация с нашите майстори мебелисти.
                     </p>
 
-                    {/* Animated Button */}
-                    <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        transition={{ duration: 0.2, ease: "easeOut" }}
-                        className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors text-md sm:text-lg font-medium"
+                    <motion.a
+                        href="tel:+359988933109"
+                        variants={{
+                            hidden: { opacity: 0, y: 20 },
+                            visible: {
+                                opacity: 1,
+                                y: 0,
+                                transition: { duration: 1, delay: 0.6 },
+                            },
+                        }}
                     >
-                        Запишете се сега
-                    </motion.button>
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            transition={{ duration: 0.2, ease: "easeOut" }}
+                            className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors text-md sm:text-lg font-medium"
+                        >
+                            Обадете се сега
+                        </motion.button>
+                    </motion.a>
                 </div>
             </motion.div>
         </div>
