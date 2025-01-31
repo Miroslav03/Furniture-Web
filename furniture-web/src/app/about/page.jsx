@@ -81,7 +81,7 @@ const AboutPage = () => {
                             }}
                             className="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-lg w-3/4"
                         >
-                            <h3 className="text-2xl font-light mb-4">
+                            <h3 className=" text-xl sm:text-2xl font-light mb-4">
                                 Признати от 1990
                             </h3>
                             <p className="text-gray-600">
@@ -106,7 +106,7 @@ const AboutPage = () => {
                         <h2 className="text-4xl font-light mb-8">
                             Нашата история
                         </h2>
-                        <p className="text-lg text-gray-600">
+                        <p className="text-md sm:text-lg text-gray-600">
                             Три поколения – баща и двама синове, посветени на
                             създаването на уникални мебели от масивна дървесина.
                             Всяко изделие, което излиза от нашата работилница,
@@ -140,7 +140,7 @@ const AboutPage = () => {
                                 }}
                                 transition={{ duration: 1, ease: "easeOut" }}
                             >
-                                <h3 className="text-2xl font-light text-gray-800 mb-4">
+                                <h3 className="text-xl sm:text-2xl font-light text-gray-800 mb-4">
                                     Нашата философия
                                 </h3>
                                 <p className="text-gray-600">
@@ -159,7 +159,7 @@ const AboutPage = () => {
                                     delay: 0.2,
                                 }}
                             >
-                                <h3 className="text-2xl font-light text-gray-800 mb-4">
+                                <h3 className="text-xl sm:text-2xl font-light text-gray-800 mb-4">
                                     Доверие и качество
                                 </h3>
                                 <p className="text-gray-600">
@@ -453,7 +453,7 @@ const AboutPage = () => {
                     <h2 className="text-4xl font-light mb-8">
                         Готови ли сте да преобразите вашия интериор?
                     </h2>
-                    <p className="text-lg text-gray-600 mb-12 max-w-xl mx-auto">
+                    <p className="text-md sm:text-lg text-gray-600 mb-12 max-w-xl mx-auto">
                         Нека създадем нещо уникално заедно. Запишете се за
                         безплатна консултация с нашите майстори мебелисти.
                     </p>
@@ -463,7 +463,7 @@ const AboutPage = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         transition={{ duration: 0.2, ease: "easeOut" }}
-                        className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors text-lg font-medium"
+                        className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors text-md sm:text-lg font-medium"
                     >
                         Запишете се сега
                     </motion.button>
