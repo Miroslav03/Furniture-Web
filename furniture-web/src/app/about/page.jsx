@@ -41,63 +41,109 @@ const AboutPage = () => {
 
             {/* Our Story Section */}
             <section className="py-24 px-6 md:px-12 lg:px-24">
-                <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
-                    <div className="relative group">
-                        <div className="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden">
-                            <Image
-                                src="/images/gallery/about-owner.jpg"
-                                alt="Our workshop"
-                                className="w-full h-full object-cover transform group-hover:scale-105 transition-all rounded-xl"
-                                fill
-                            />
-                        </div>
-                        <div className="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-lg w-3/4">
-                            <h3 className="text-2xl font-light mb-4">
-                                Признати от 1990
+            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+                {/* Image with Floating Card */}
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, ease: "easeOut" }}
+                    className="relative group"
+                >
+                    {/* Image with Smooth Zoom */}
+                    <motion.div
+                        initial={{ scale: 0.9, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+                        className="aspect-[4/3] bg-gray-100 rounded-xl overflow-hidden"
+                    >
+                        <Image
+                            src="/images/gallery/about-owner.jpg"
+                            alt="Our workshop"
+                            className="w-full h-full object-cover transform group-hover:scale-105 transition-all rounded-xl"
+                            fill
+                        />
+                    </motion.div>
+
+                    {/* Floating Info Card */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}
+                        className="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-lg w-3/4"
+                    >
+                        <h3 className="text-2xl font-light mb-4">
+                            Признати от 1990
+                        </h3>
+                        <p className="text-gray-600">
+                            Изработка на качествени мебели за качествени клиенти
+                        </p>
+                    </motion.div>
+                </motion.div>
+
+                {/* Text Section with Smooth Fade-in */}
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+                    className="space-y-6"
+                >
+                    <h2 className="text-4xl font-light mb-8">Нашата история</h2>
+                    <p className="text-lg text-gray-600">
+                        Три поколения – баща и двама синове, посветени на
+                        създаването на уникални мебели от масивна дървесина.
+                        Всяко изделие, което излиза от нашата работилница,
+                        носи не само красотата на естественото дърво, но и
+                        отпечатъка на семейното ни призвание, майсторството
+                        и вниманието към детайла.
+                    </p>
+
+                    {/* Philosophy & Quality Grid with Staggered Animation */}
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        variants={{
+                            hidden: { opacity: 0, y: 40 },
+                            visible: {
+                                opacity: 1,
+                                y: 0,
+                                transition: { delayChildren: 0.3, staggerChildren: 0.3 }
+                            }
+                        }}
+                        className="grid grid-cols-2 gap-8 mt-12"
+                    >
+                        <motion.div
+                            variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+                            transition={{ duration: 1, ease: "easeOut" }}
+                        >
+                            <h3 className="text-2xl font-light text-gray-800 mb-4">
+                                Нашата философия
                             </h3>
                             <p className="text-gray-600">
-                                Изработка на качествени мебели за качествени
-                                клиенти
+                                Вярваме, че всяко изделие носи духа на
+                                дървото и вниманието към детайла.
                             </p>
-                        </div>
-                    </div>
-
-                    <div className="space-y-6">
-                        <h2 className="text-4xl font-light mb-8">
-                            Нашата история
-                        </h2>
-                        <p className="text-lg text-gray-600">
-                            Три поколения – баща и двама синове, посветени на
-                            създаването на уникални мебели от масивна дървесина.
-                            Всяко изделие, което излиза от нашата работилница,
-                            носи не само красотата на естественото дърво, но и
-                            отпечатъка на семейното ни призвание, майсторството
-                            и вниманието към детайла.
-                        </p>
-                        <div className="grid grid-cols-2 gap-8 mt-12">
-                            <div>
-                                <h3 className="text-2xl font-light text-gray-800 mb-4">
-                                    Нашата философия
-                                </h3>
-                                <p className="text-gray-600">
-                                    Вярваме, че всяко изделие носи духа на
-                                    дървото и вниманието към детайла.
-                                </p>
-                            </div>
-                            <div>
-                                <h3 className="text-2xl font-light text-gray-800 mb-4">
-                                    Доверие и качество
-                                </h3>
-                                <p className="text-gray-600">
-                                    Нашите изделия съчетават занаятчийска
-                                    прецизност, естествена красота и внимание
-                                    към детайла.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                        </motion.div>
+                        <motion.div
+                            variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
+                            transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
+                        >
+                            <h3 className="text-2xl font-light text-gray-800 mb-4">
+                                Доверие и качество
+                            </h3>
+                            <p className="text-gray-600">
+                                Нашите изделия съчетават занаятчийска
+                                прецизност, естествена красота и внимание
+                                към детайла.
+                            </p>
+                        </motion.div>
+                    </motion.div>
+                </motion.div>
+            </div>
+        </section>
             {/* Values Section */}
             <section className="bg-gray-50 py-24 px-6 md:px-12 lg:px-24">
                 <div className="max-w-7xl mx-auto">
