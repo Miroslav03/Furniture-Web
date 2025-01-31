@@ -475,7 +475,7 @@ const GalleryPage = () => {
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    transition={{ duration: 1, ease: "easeInOut" }}
                     className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center"
                 >
                     {/* Left Text Content */}
@@ -484,15 +484,14 @@ const GalleryPage = () => {
                         whileInView="visible"
                         viewport={{ once: true }}
                         variants={{
-                            hidden: { opacity: 0, y: 50 },
+                            hidden: { opacity: 0, x: -50 },
                             visible: {
                                 opacity: 1,
-                                y: 0,
+                                x: 0,
                                 transition: {
-                                    duration: 1.8,
-                                    ease: "easeOut",
-                                    delayChildren: 0.4,
-                                    staggerChildren: 0.5,
+                                    duration: 1.2,
+                                    ease: "easeInOut",
+                                    staggerChildren: 0.3,
                                 },
                             },
                         }}
@@ -500,10 +499,10 @@ const GalleryPage = () => {
                     >
                         <motion.h2
                             variants={{
-                                hidden: { opacity: 0, y: 30 },
+                                hidden: { opacity: 0, y: 20 },
                                 visible: { opacity: 1, y: 0 },
                             }}
-                            transition={{ duration: 1.5, ease: "easeOut" }}
+                            transition={{ duration: 1, ease: "easeInOut" }}
                             className="text-4xl font-light mb-6"
                         >
                             Нашето дизайнерско наследство
@@ -511,13 +510,13 @@ const GalleryPage = () => {
 
                         <motion.p
                             variants={{
-                                hidden: { opacity: 0, y: 30 },
+                                hidden: { opacity: 0, y: 20 },
                                 visible: { opacity: 1, y: 0 },
                             }}
                             transition={{
-                                duration: 1.8,
-                                ease: "easeOut",
-                                delay: 0.3,
+                                duration: 1.2,
+                                ease: "easeInOut",
+                                delay: 0.2,
                             }}
                             className="text-lg text-gray-600"
                         >
@@ -534,15 +533,14 @@ const GalleryPage = () => {
                             whileInView="visible"
                             viewport={{ once: true }}
                             variants={{
-                                hidden: { opacity: 0, y: 40 },
+                                hidden: { opacity: 0, y: 20 },
                                 visible: {
                                     opacity: 1,
                                     y: 0,
                                     transition: {
-                                        duration: 1.5,
-                                        ease: "easeOut",
-                                        delayChildren: 0.6,
-                                        staggerChildren: 0.6,
+                                        duration: 1,
+                                        ease: "easeInOut",
+                                        staggerChildren: 0.4,
                                     },
                                 },
                             }}
@@ -550,7 +548,7 @@ const GalleryPage = () => {
                         >
                             <motion.div
                                 variants={{
-                                    hidden: { opacity: 0, y: 40 },
+                                    hidden: { opacity: 0, y: 20 },
                                     visible: { opacity: 1, y: 0 },
                                 }}
                             >
@@ -565,7 +563,7 @@ const GalleryPage = () => {
                             </motion.div>
                             <motion.div
                                 variants={{
-                                    hidden: { opacity: 0, y: 40 },
+                                    hidden: { opacity: 0, y: 20 },
                                     visible: { opacity: 1, y: 0 },
                                 }}
                             >
@@ -582,26 +580,19 @@ const GalleryPage = () => {
 
                     {/* Right Image Grid */}
                     <motion.div
-                        initial="hidden"
-                        whileInView="visible"
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        variants={{
-                            hidden: { opacity: 0, scale: 0.92 },
-                            visible: {
-                                opacity: 1,
-                                scale: 1,
-                                transition: {
-                                    duration: 1.5,
-                                    ease: "easeOut",
-                                    delay: 0.5,
-                                },
-                            },
-                        }}
+                        transition={{ duration: 1.2, ease: "easeInOut" }}
                         className="grid grid-cols-2 gap-6"
                     >
                         <motion.div
-                            whileHover={{ scale: 1.03 }}
-                            transition={{ duration: 0.5, ease: "easeOut" }}
+                            whileHover={{ scale: 1.05 }}
+                            transition={{
+                                type: "spring",
+                                stiffness: 200,
+                                damping: 10,
+                            }}
                             className="aspect-square bg-gray-100 rounded-xl overflow-hidden"
                         >
                             <img
@@ -611,8 +602,12 @@ const GalleryPage = () => {
                             />
                         </motion.div>
                         <motion.div
-                            whileHover={{ scale: 1.03 }}
-                            transition={{ duration: 0.5, ease: "easeOut" }}
+                            whileHover={{ scale: 1.05 }}
+                            transition={{
+                                type: "spring",
+                                stiffness: 200,
+                                damping: 10,
+                            }}
                             className="aspect-[3/4] bg-gray-100 rounded-xl overflow-hidden mt-12"
                         >
                             <img
@@ -640,13 +635,19 @@ const GalleryPage = () => {
                     viewport={{ once: true }}
                     className="max-w-7xl mx-auto text-center mb-20"
                 >
-                    <h2 className="text-4xl font-light mb-6">Разгледайте колекцията</h2>
+                    <h2 className="text-4xl font-light mb-6">
+                        Разгледайте колекцията
+                    </h2>
 
                     {/* Category Selector with Smooth Transition */}
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, delay: 0.4, ease: "easeOut" }}
+                        transition={{
+                            duration: 1,
+                            delay: 0.4,
+                            ease: "easeOut",
+                        }}
                         className="mb-8 flex justify-center"
                     >
                         <select
@@ -666,7 +667,11 @@ const GalleryPage = () => {
                     <motion.p
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1.4, delay: 0.6, ease: "easeOut" }}
+                        transition={{
+                            duration: 1.4,
+                            delay: 0.6,
+                            ease: "easeOut",
+                        }}
                         viewport={{ once: true }}
                         className="text-gray-600 max-w-2xl mx-auto"
                     >
@@ -678,7 +683,13 @@ const GalleryPage = () => {
 
             {/* Gallery Grid */}
             <section className="pb-24 pt-2 px-6 md:px-12 lg:px-24">
-                <div className="max-w-7xl mx-auto">
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, ease: "easeInOut" }}
+                    className="max-w-7xl mx-auto"
+                >
                     <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
                         {filteredPhotos.map((photo) => (
                             <div
@@ -712,7 +723,7 @@ const GalleryPage = () => {
                             </div>
                         ))}
                     </div>
-                </div>
+                </motion.div>
             </section>
 
             {/* Lightbox Modal */}
