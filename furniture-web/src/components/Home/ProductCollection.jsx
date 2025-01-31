@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const ProductCollection = () => {
     const products = [
         {
@@ -46,14 +48,16 @@ const ProductCollection = () => {
                     първокласни мебели, съчетаваща вечен дизайн, изключително
                     качество и модерен комфорт.
                 </p>
-                <button className="bg-black text-white px-8 py-3 rounded-full  hover:bg-gray-800 transition-colors ">
-                    Открий
-                </button>
+                <Link href={'/gallery'}>
+                    <button className="bg-black text-white px-8 py-3 rounded-full  hover:bg-gray-800 transition-colors ">
+                        Открий
+                    </button>
+                </Link>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                 {products.map((product, index) => (
-                    <div key={index} className="group relative">
+                    <div key={index} className="group relative cursor-pointer">
                         <div
                             className="relative group aspect-square bg-gray-100 rounded-lg mb-4 bg-cover bg-center"
                             style={{

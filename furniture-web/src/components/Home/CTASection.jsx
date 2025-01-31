@@ -7,11 +7,14 @@ export const CTASection = () => {
                     Вечна Елегантност
                 </h2>
                 <p className="text-lg mb-12 max-w-xl mx-auto">
-                Открийте изключително майсторство и съвременен дизайн, които подчертават вашият интериор.
+                    Открийте изключително майсторство и съвременен дизайн, които
+                    подчертават вашият интериор.
                 </p>
-                <button className="bg-white text-black px-8 py-3 rounded-full hover:bg-gray-200 transition-colors text-lg font-medium">
-                    Започни Проекта Си Сега
-                </button>
+                <a href="tel:+359988933109">
+                    <button className="bg-white text-black px-8 py-3 rounded-full hover:bg-gray-200 transition-colors text-lg font-medium">
+                        Започни Проекта Си Сега
+                    </button>
+                </a>
             </div>
         </div>
     );

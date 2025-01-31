@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const AboutSection = () => {
     return (
         <div className="bg-white pb-24 sm:pb-32 pt-0 sm:pt-12 px-6 md:px-12 lg:px-24">
@@ -43,9 +45,11 @@ export const AboutSection = () => {
                         всяко пространство.
                     </p>
 
-                    <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors text-lg font-medium">
-                        За нас
-                    </button>
+                    <Link href={'/about'}>
+                        <button className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors text-lg font-medium">
+                            За нас
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>
