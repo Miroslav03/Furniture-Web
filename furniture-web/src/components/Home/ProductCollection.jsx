@@ -66,7 +66,7 @@ const ProductCollection = () => {
                     първокласни мебели, съчетаваща вечен дизайн, изключително
                     качество и модерен комфорт.
                 </motion.p>
-                <Link href={"/gallery"}>
+                <Link href={"/galeria"}>
                     <motion.button 
                         className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors"
                         whileHover={{ scale: 1.05 }}
@@ -88,7 +88,7 @@ const ProductCollection = () => {
                     <Link
                         key={index}
                         href={{
-                            pathname: "/gallery",
+                            pathname: "/galeria",
                             query: { type: product.type },
                         }}
                     >

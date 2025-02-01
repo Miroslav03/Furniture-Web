@@ -89,7 +89,7 @@ export const AboutSection = () => {
                         всяко пространство.
                     </motion.p>
 
-                    <Link href={"/about"}>
+                    <Link href={"/za-nas"}>
                         <motion.button
                             className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition-colors text-md sm:text-lg font-medium"
                             variants={fadeInUp}

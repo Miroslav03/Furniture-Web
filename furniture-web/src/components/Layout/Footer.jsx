@@ -16,19 +16,19 @@ export const Footer = () => {
               <h4 className="font-semibold mb-4 ">Галерия</h4>
               <ul className="space-y-2 text-gray-600 text-sm sm:text-md">
                 <li><Link href={{
-                            pathname: "/gallery",
+                            pathname: "/galeria",
                             query: { type: 'kitchen' },
                         }} className="hover:text-black transition-colors">Кухни</Link></li>
                 <li><Link href={{
-                            pathname: "/gallery",
+                            pathname: "/galeria",
                             query: { type: 'heavy' },
                         }} className="hover:text-black transition-colors">Мебели от масив</Link></li>
                 <li><Link href={{
-                            pathname: "/gallery",
+                            pathname: "/galeria",
                             query: { type: 'wardrobe' },
                         }} className="hover:text-black transition-colors">Гардероби</Link></li>
                 <li><Link href={{
-                            pathname: "/gallery",
+                            pathname: "/galeria",
                             query: { type: 'other' },
                         }} className="hover:text-black transition-colors">Други</Link></li>
               </ul>
@@ -37,8 +37,8 @@ export const Footer = () => {
             <div>
               <h4 className="font-semibold mb-4">Информация</h4>
               <ul className="space-y-2 text-gray-600 text-sm sm:text-md">
-                <li><Link href="/about" className="hover:text-black transition-colors">За нас</Link></li>
-                <li><Link href="/contact-us" className="hover:text-black transition-colors">Контакти</Link></li>
+                <li><Link href="/za-nas" className="hover:text-black transition-colors">За нас</Link></li>
+                <li><Link href="/kontakti" className="hover:text-black transition-colors">Контакти</Link></li>
               </ul>
             </div>
           </div>

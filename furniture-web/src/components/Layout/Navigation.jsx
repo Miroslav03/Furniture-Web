@@ -87,7 +87,7 @@ function NavLinks({ mobile, onClick }) {
                 НАЧАЛО
             </Link>
             <Link
-                href="/gallery"
+                href="/galeria"
                 className={`text-white/90 hover:text-white transition-colors ${
                     mobile
                         ? "text-xl py-2 hover:pl-2 transition-all"
@@ -98,7 +98,7 @@ function NavLinks({ mobile, onClick }) {
                 ГАЛЕРИЯ
             </Link>
             <Link
-                href="/about"
+                href="/za-nas"
                 className={`text-white/90 hover:text-white transition-colors ${
                     mobile
                         ? "text-xl py-2 hover:pl-2 transition-all"
@@ -109,7 +109,7 @@ function NavLinks({ mobile, onClick }) {
                 ЗА НАС
             </Link>
             <Link
-                href="/contact-us"
+                href="/kontakti"
                 className={`text-white/90 hover:text-white transition-colors ${
                     mobile
                         ? "text-xl py-2 hover:pl-2 transition-all"
