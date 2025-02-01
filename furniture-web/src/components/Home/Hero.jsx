@@ -64,9 +64,9 @@ const HeroSection = () => {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
                         onClick={scrollToProducts}
-                        className="bg-white text-black px-8 py-3 rounded-full hover:bg-gray-100 transition-colors text-md sm:text-lg font-medium"
+                        className="bg-white text-black px-8 py-3 rounded-full hover:bg-gray-100 transition-colors text-md sm:text-lg font-light sm:font-medium"
                     >
-                        Разгледай сега
+                        Разгледай
                     </motion.button>
                 </motion.div>
             </div>
