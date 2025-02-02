@@ -424,6 +424,42 @@ const GalleryPage = () => {
             orientation: "portrait",
             type: "material",
         },
+        {
+            id: 66,
+            src: "/images/gallery/home-kitchen.jpg",
+            orientation: "portrait",
+            type: "kitchen",
+        },
+        {
+            id: 67,
+            src: "/images/gallery/contact-us.jpg",
+            orientation: "landscape",
+            type: "kitchen",
+        },
+        {
+            id: 68,
+            src: "/images/gallery/about-image-3.jpg",
+            orientation: "landscape",
+            type: "kitchen",
+        },
+        {
+            id: 69,
+            src: "/images/gallery/bg-cover.jpg",
+            orientation: "landscape",
+            type: "kitchen",
+        },
+        {
+            id: 70,
+            src: "/images/gallery/about-image-1.jpg",
+            orientation: "portrait",
+            type: "kitchen",
+        },
+        {
+            id: 71,
+            src: "/images/gallery/about-3.jpg",
+            orientation: "landscape",
+            type: "kitchen",
+        },
     ];
 
     const filteredPhotos =
@@ -433,7 +469,7 @@ const GalleryPage = () => {
     return (
         <div className="bg-white">
             {/* Hero Section */}
-            <div className="relative h-[600px] bg-[url('/images/gallery/gallery-hero.jpg')] bg-cover bg-center">
+            <div className="relative h-[600px] bg-[url('/images/gallery/contact-us.jpg')] bg-cover bg-center">
                 {/* Transparent Navigation Bar */}
                 <Navigation />
 
@@ -596,7 +632,7 @@ const GalleryPage = () => {
                             className="aspect-square bg-gray-100 rounded-xl overflow-hidden"
                         >
                             <img
-                                src="/images/gallery/factory.jpg"
+                                src="/images/gallery/gallery-1.jpg"
                                 alt="Design studio"
                                 className="w-full h-full object-cover transition-transform"
                             />
