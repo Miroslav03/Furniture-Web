@@ -600,7 +600,7 @@ const GalleryPage = () => {
                                 stiffness: 200,
                                 damping: 10,
                             }}
-                            className="aspect-[3/4] bg-gray-100 rounded-xl overflow-hidden mt-12"
+                            className="aspect-[3/4] bg-gray-100 rounded-xl overflow-hidden mt-[-80px] sm:mt-12"
                         >
                             <img
                                 src="/images/gallery/material-closeup.jpg"
@@ -618,7 +618,7 @@ const GalleryPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 1.5, ease: "easeOut" }}
-                className="pb-2 pt-24 px-6 md:px-12 lg:px-24"
+                className="pb-2 pt-16 sm:pt-24 px-6 md:px-12 lg:px-24"
             >
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
