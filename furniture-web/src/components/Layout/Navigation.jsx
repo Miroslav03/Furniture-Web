@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 export default function Navigation() {
     const [isOpen, setIsOpen] = useState(false);
-    
+
     useEffect(() => {
         if (isOpen) {
             const handleScroll = () => {
@@ -17,9 +17,11 @@ export default function Navigation() {
     }, [isOpen]);
     return (
         <nav className="relative z-50 flex items-center justify-between px-6 py-8 md:px-16">
-            <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-widest">
-                Raev Design
-            </h1>
+            <Link href={'/'}>
+                <h1 className="text-2xl sm:text-3xl font-bold text-white tracking-widest">
+                    Raev Design
+                </h1>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
