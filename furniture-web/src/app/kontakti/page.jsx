@@ -125,8 +125,7 @@ const contactItems = [
     },
     {
         title: "Напиши имейл",
-        line1: "hello@gmail.com",
-        line2: "support@gmail.com",
+        line1: "raev.mebeli@gmail.com",
         icon: (
             <svg
                 xmlns="http://www.w3.org/2000/svg"
