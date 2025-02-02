@@ -3,6 +3,7 @@ import Navigation from "@/components/Layout/Navigation";
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const GalleryPage = () => {
     const searchParams = useSearchParams();
@@ -58,6 +59,26 @@ const GalleryPage = () => {
         },
         {
             src: "/images/gallery/heavy-6.jpg",
+            orientation: "landscape",
+            type: "heavy",
+        },
+        {
+            src: "/images/gallery/heavy-7.jpg",
+            orientation: "portrait",
+            type: "heavy",
+        },
+        {
+            src: "/images/gallery/heavy-8.jpg",
+            orientation: "portrait",
+            type: "heavy",
+        },
+        {
+            src: "/images/gallery/heavy-9.jpg",
+            orientation: "landscape",
+            type: "heavy",
+        },
+        {
+            src: "/images/gallery/heavy-10.jpeg",
             orientation: "landscape",
             type: "heavy",
         },
@@ -390,6 +411,11 @@ const GalleryPage = () => {
             orientation: "landscape",
             type: "other",
         },
+        {
+            src: "/images/gallery/other-25.jpeg",
+            orientation: "landscape",
+            type: "other",
+        },
     ];
 
     const filteredPhotos =
@@ -668,11 +694,13 @@ const GalleryPage = () => {
                                 onClick={() => setSelectedPhoto(photo)}
                             >
                                 <div className="relative rounded-xl overflow-hidden transition-all hover:shadow-xl">
-                                    <img
+                                    <Image
                                         src={photo.src}
                                         alt="Gallery photo"
                                         className="w-full h-auto object-cover"
                                         loading="lazy"
+                                        width={500} // specify appropriate width
+                                        height={500} // specify appropriate height (or adjust based on orientation)
                                     />
                                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
                                         <svg
