@@ -359,10 +359,9 @@ const AboutPage = () => {
                     ))}
                 </div>
             </motion.div>
-            {/* Team Section */}
-            <section className="py-24 px-6 md:px-12 lg:px-24">
+            
+           {/*  <section className="py-24 px-6 md:px-12 lg:px-24">
                 <div className="max-w-7xl mx-auto">
-                    {/* Title with Fade-in */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -378,7 +377,6 @@ const AboutPage = () => {
                         </p>
                     </motion.div>
 
-                    {/* Team Members with Staggered Appearance */}
                     <motion.div
                         initial="hidden"
                         whileInView="visible"
@@ -406,7 +404,6 @@ const AboutPage = () => {
                                 transition={{ duration: 1, ease: "easeOut" }}
                                 className="group relative"
                             >
-                                {/* Team Member Image with Hover Zoom */}
                                 <motion.div
                                     whileHover={{ scale: 1.05 }}
                                     transition={{
@@ -422,7 +419,6 @@ const AboutPage = () => {
                                     />
                                 </motion.div>
 
-                                {/* Team Member Details */}
                                 <div className="text-center">
                                     <h3 className="text-2xl font-light mb-2">
                                         Alexandra Wood
@@ -439,7 +435,7 @@ const AboutPage = () => {
                         ))}
                     </motion.div>
                 </div>
-            </section>
+            </section> */}
 
             {/* CTA Section */}
             <motion.div
@@ -454,7 +450,7 @@ const AboutPage = () => {
                         Готови ли сте да преобразите вашия интериор?
                     </h2>
                     <p className="text-md sm:text-lg text-gray-600 mb-12 max-w-xl mx-auto">
-                        Нека създадем нещо уникално заедно. Запишете се за
+                        Нека създадем нещо уникално заедно. Обадете се за
                         безплатна консултация с нашите майстори мебелисти.
                     </p>
 

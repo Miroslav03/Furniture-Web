@@ -22,7 +22,7 @@ export const CTASection = () => {
                     className="text-4xl md:text-5xl font-light mb-8"
                     variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.2 } } }}
                 >
-                    Преобразете Своето Пространство С<br />
+                    Преобразете Своя Интериор С<br />
                     Вечна Елегантност
                 </motion.h2>
 
@@ -31,7 +31,7 @@ export const CTASection = () => {
                     variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.4 } } }}
                 >
                     Открийте изключително майсторство и съвременен дизайн, които
-                    подчертават вашият интериор.
+                    подчертават вашият стил.
                 </motion.p>
 
                 <motion.a 
