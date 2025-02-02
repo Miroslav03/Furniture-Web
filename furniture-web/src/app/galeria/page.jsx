@@ -153,6 +153,16 @@ const GalleryPage = () => {
             orientation: "landscape",
             type: "kitchen",
         },
+        {
+            src: "/images/gallery/kitchen-12.jpg",
+            orientation: "portrait",
+            type: "kitchen",
+        },
+        {
+            src: "/images/gallery/kitchen-13.jpg",
+            orientation: "portrait",
+            type: "kitchen",
+        },
         //Wardrobes
         {
             src: "/images/gallery/wardrobe.jpg",
@@ -431,7 +441,18 @@ const GalleryPage = () => {
             orientation: "portrait",
             type: "other",
         },
+        {
+            src: "/images/gallery/other-26.jpg",
+            orientation: "landscape",
+            type: "other",
+        },
+        {
+            src: "/images/gallery/other-27.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
     ];
+    
 
     const filteredPhotos =
         selectedType === "all"
