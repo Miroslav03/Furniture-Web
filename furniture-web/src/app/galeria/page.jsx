@@ -31,434 +31,364 @@ const GalleryPage = () => {
 
     const photos = [
         {
-            id: 1,
             src: "/images/gallery/heavy-1.jpg",
             orientation: "square",
             type: "heavy",
         },
         {
-            id: 2,
             src: "/images/gallery/heavy-2.jpg",
             orientation: "portrait",
             type: "heavy",
         },
+
         {
-            id: 3,
             src: "/images/gallery/heavy-3.jpg",
-            orientation: "portrait",
+            orientation: "square",
             type: "heavy",
         },
         {
-            id: 4,
             src: "/images/gallery/heavy-4.jpg",
             orientation: "portrait",
             type: "heavy",
         },
         {
-            id: 5,
             src: "/images/gallery/heavy-5.jpg",
-            orientation: "portrait",
-            type: "heavy",
-        },
-        {
-            id: 6,
-            src: "/images/gallery/heavy-6.jpg",
-            orientation: "portrait",
-            type: "heavy",
-        },
-        {
-            id: 7,
-            src: "/images/gallery/heavy-7.jpg",
-            orientation: "portrait",
-            type: "heavy",
-        },
-        {
-            id: 8,
-            src: "/images/gallery/heavy-8.jpg",
-            orientation: "portrait",
-            type: "heavy",
-        },
-        {
-            id: 9,
-            src: "/images/gallery/heavy-9.jpg",
-            orientation: "portrait",
-            type: "heavy",
-        },
-        {
-            id: 10,
-            src: "/images/gallery/heavy-10.jpg",
-            orientation: "portrait",
-            type: "heavy",
-        },
-        {
-            id: 11,
-            src: "/images/gallery/heavy-11.jpg",
-            orientation: "portrait",
-            type: "heavy",
-        },
-        {
-            id: 12,
-            src: "/images/gallery/heavy-12.jpg",
-            orientation: "portrait",
-            type: "heavy",
-        },
-        {
-            id: 13,
-            src: "/images/gallery/heavy-13.jpg",
             orientation: "square",
             type: "heavy",
         },
         {
-            id: 14,
-            src: "/images/gallery/heavy-14.jpg",
+            src: "/images/gallery/heavy-6.jpg",
             orientation: "landscape",
             type: "heavy",
         },
         //Kitchen
         {
-            id: 15,
             src: "/images/gallery/kitchen-1.jpg",
             orientation: "landscape",
             type: "kitchen",
         },
         {
-            id: 16,
             src: "/images/gallery/kitchen-2.jpg",
             orientation: "square",
             type: "kitchen",
         },
         {
-            id: 17,
             src: "/images/gallery/kitchen-3.jpg",
             orientation: "portrait",
             type: "kitchen",
         },
         {
-            id: 18,
             src: "/images/gallery/kitchen-4.jpg",
             orientation: "portrait",
             type: "kitchen",
         },
         {
-            id: 19,
             src: "/images/gallery/kitchen-5.jpg",
             orientation: "portrait",
             type: "kitchen",
         },
         {
-            id: 20,
             src: "/images/gallery/kitchen-6.jpg",
             orientation: "portrait",
             type: "kitchen",
         },
         {
-            id: 21,
             src: "/images/gallery/kitchen-7.jpg",
             orientation: "portrait",
             type: "kitchen",
         },
         {
-            id: 22,
             src: "/images/gallery/kitchen-8.jpg",
             orientation: "portrait",
             type: "kitchen",
         },
         {
-            id: 23,
             src: "/images/gallery/kitchen-9.jpg",
             orientation: "square",
             type: "kitchen",
         },
         {
-            id: 24,
             src: "/images/gallery/kitchen-10.jpg",
             orientation: "portrait",
             type: "kitchen",
         },
         {
-            id: 25,
             src: "/images/gallery/kitchen-11.jpg",
             orientation: "landscape",
             type: "kitchen",
         },
         //Wardrobes
         {
-            id: 26,
             src: "/images/gallery/wardrobe.jpg",
             orientation: "portrait",
             type: "wardrobe",
         },
         {
-            id: 27,
             src: "/images/gallery/wardrobe-1.jpg",
             orientation: "landscape",
             type: "wardrobe",
         },
         {
-            id: 28,
             src: "/images/gallery/wardrobe-2.jpg",
             orientation: "portrait",
             type: "wardrobe",
         },
         {
-            id: 29,
             src: "/images/gallery/wardrobe-3.jpg",
             orientation: "portrait",
             type: "wardrobe",
         },
         {
-            id: 30,
             src: "/images/gallery/wardrobe-4.jpg",
             orientation: "portrait",
             type: "wardrobe",
         },
         {
-            id: 31,
             src: "/images/gallery/wardrobe-5.jpg",
             orientation: "portrait",
             type: "wardrobe",
         },
         {
-            id: 32,
             src: "/images/gallery/wardrobe-6.jpg",
             orientation: "portrait",
             type: "wardrobe",
         },
         {
-            id: 33,
             src: "/images/gallery/wardrobe-7.jpg",
             orientation: "portrait",
             type: "wardrobe",
         },
         {
-            id: 34,
             src: "/images/gallery/wardrobe-8.jpg",
             orientation: "portrait",
             type: "wardrobe",
         },
         //Other
         {
-            id: 35,
             src: "/images/gallery/other-1.jpg",
             orientation: "landscape",
             type: "other",
         },
         {
-            id: 36,
             src: "/images/gallery/other-2.jpg",
             orientation: "landscape",
             type: "other",
         },
         {
-            id: 37,
             src: "/images/gallery/other-3.jpg",
             orientation: "landscape",
             type: "other",
         },
         {
-            id: 38,
             src: "/images/gallery/other-4.jpg",
             orientation: "portrait",
             type: "other",
         },
         {
-            id: 39,
             src: "/images/gallery/other-5.jpg",
             orientation: "portrait",
             type: "other",
         },
         {
-            id: 40,
             src: "/images/gallery/other-6.jpg",
             orientation: "landscape",
             type: "other",
         },
         {
-            id: 41,
             src: "/images/gallery/other-7.jpg",
             orientation: "portrait",
             type: "other",
         },
         {
-            id: 42,
             src: "/images/gallery/other-8.jpg",
             orientation: "portrait",
             type: "other",
         },
         {
-            id: 43,
             src: "/images/gallery/other-9.jpg",
             orientation: "portrait",
             type: "other",
         },
         {
-            id: 44,
             src: "/images/gallery/other-10.jpg",
             orientation: "portrait",
             type: "other",
         },
         {
-            id: 45,
             src: "/images/gallery/other-11.jpg",
             orientation: "portrait",
             type: "other",
         },
         {
-            id: 46,
             src: "/images/gallery/other-12.jpg",
             orientation: "portrait",
             type: "other",
         },
         {
-            id: 47,
             src: "/images/gallery/other-13.jpg",
             orientation: "portrait",
             type: "other",
         },
         {
-            id: 48,
             src: "/images/gallery/other-14.jpg",
             orientation: "portrait",
             type: "other",
         },
         {
-            id: 49,
             src: "/images/gallery/other-15.jpg",
             orientation: "portrait",
             type: "other",
         },
         {
-            id: 50,
             src: "/images/gallery/other-16.jpg",
             orientation: "portrait",
             type: "other",
         },
         //Material
         {
-            id: 51,
             src: "/images/gallery/material-1.jpg",
             orientation: "portrait",
             type: "material",
         },
         {
-            id: 52,
             src: "/images/gallery/material-2.jpg",
             orientation: "portrait",
             type: "material",
         },
         {
-            id: 53,
             src: "/images/gallery/material-3.jpg",
             orientation: "portrait",
             type: "material",
         },
         {
-            id: 54,
             src: "/images/gallery/material-4.jpg",
             orientation: "portrait",
             type: "material",
         },
         {
-            id: 55,
             src: "/images/gallery/material-5.jpg",
             orientation: "portrait",
             type: "material",
         },
         {
-            id: 56,
             src: "/images/gallery/material-6.jpg",
             orientation: "portrait",
             type: "material",
         },
         {
-            id: 57,
             src: "/images/gallery/material-7.jpg",
             orientation: "portrait",
             type: "material",
         },
         {
-            id: 58,
             src: "/images/gallery/material-8.jpg",
             orientation: "portrait",
             type: "material",
         },
         {
-            id: 59,
             src: "/images/gallery/material-9.jpg",
             orientation: "portrait",
             type: "material",
         },
         {
-            id: 60,
             src: "/images/gallery/material-10.jpg",
             orientation: "portrait",
             type: "material",
         },
         {
-            id: 61,
             src: "/images/gallery/material-11.jpg",
             orientation: "portrait",
             type: "material",
         },
         {
-            id: 62,
             src: "/images/gallery/material-12.jpg",
             orientation: "portrait",
             type: "material",
         },
         {
-            id: 63,
             src: "/images/gallery/material-13.jpg",
             orientation: "portrait",
             type: "material",
         },
         {
-            id: 64,
             src: "/images/gallery/material-14.jpg",
             orientation: "portrait",
             type: "material",
         },
         {
-            id: 65,
             src: "/images/gallery/material-15.jpg",
             orientation: "portrait",
             type: "material",
         },
         {
-            id: 66,
             src: "/images/gallery/home-kitchen.jpg",
             orientation: "portrait",
             type: "kitchen",
         },
         {
-            id: 67,
             src: "/images/gallery/contact-us.jpg",
             orientation: "landscape",
             type: "kitchen",
         },
         {
-            id: 68,
             src: "/images/gallery/about-image-3.jpg",
             orientation: "landscape",
             type: "kitchen",
         },
         {
-            id: 69,
             src: "/images/gallery/bg-cover.jpg",
             orientation: "landscape",
             type: "kitchen",
         },
         {
-            id: 70,
             src: "/images/gallery/about-image-1.jpg",
             orientation: "portrait",
             type: "kitchen",
         },
         {
-            id: 71,
             src: "/images/gallery/about-3.jpg",
             orientation: "landscape",
             type: "kitchen",
+        },
+        {
+            src: "/images/gallery/other-17.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
+        {
+            src: "/images/gallery/other-18.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
+        {
+            src: "/images/gallery/other-19.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
+        {
+            src: "/images/gallery/other-20.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
+        {
+            src: "/images/gallery/other-21.jpg",
+            orientation: "square",
+            type: "other",
+        },
+        {
+            src: "/images/gallery/other-22.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
+        {
+            src: "/images/gallery/other-23.jpg",
+            orientation: "portrait",
+            type: "other",
+        },
+        {
+            src: "/images/gallery/other-24.jpg",
+            orientation: "landscape",
+            type: "other",
         },
     ];
 
@@ -469,7 +399,7 @@ const GalleryPage = () => {
     return (
         <div className="bg-white">
             {/* Hero Section */}
-            <div className="relative h-[600px] bg-[url('/images/gallery/contact-us.jpg')] bg-cover bg-center">
+            <div className="relative h-[600px] bg-[url('/images/gallery/gallery-2.jpg')] bg-cover bg-center">
                 {/* Transparent Navigation Bar */}
                 <Navigation />
 
@@ -731,9 +661,9 @@ const GalleryPage = () => {
                     className="max-w-7xl mx-auto"
                 >
                     <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-                        {filteredPhotos.map((photo) => (
+                        {filteredPhotos.map((photo, id) => (
                             <div
-                                key={photo.id}
+                                key={id}
                                 className="relative group cursor-pointer break-inside-avoid"
                                 onClick={() => setSelectedPhoto(photo)}
                             >
