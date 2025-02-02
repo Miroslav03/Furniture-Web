@@ -82,6 +82,21 @@ const GalleryPage = () => {
             orientation: "landscape",
             type: "heavy",
         },
+        {
+            src: "/images/gallery/heavy-11.jpeg",
+            orientation: "landscape",
+            type: "heavy",
+        },
+        {
+            src: "/images/gallery/heavy-12.jpg",
+            orientation: "landscape",
+            type: "heavy",
+        },
+         {
+            src: "/images/gallery/heavy-13.jpg",
+            orientation: "landscape",
+            type: "heavy",
+        },
         //Kitchen
         {
             src: "/images/gallery/kitchen-1.jpg",
@@ -412,8 +427,8 @@ const GalleryPage = () => {
             type: "other",
         },
         {
-            src: "/images/gallery/other-25.jpeg",
-            orientation: "landscape",
+            src: "/images/gallery/other-25.jpg",
+            orientation: "portrait",
             type: "other",
         },
     ];
